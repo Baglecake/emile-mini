@@ -48,8 +48,8 @@ In **émile-mini** this looks like:
 ---
 ##   
 * 🆕 Exposed **emile-mini extinction** demo via the CLI (`emile-mini extinction`)
-* Key Innovation: Intrinsic dynamics preserve knowledge without external rewards
-* Complementary to: Context-switching for escaping local optima
+* -> Key Innovation: Intrinsic dynamics preserve knowledge without external rewards
+* -> Complementary to: Context-switching for escaping local optima
   
 ```
 ==================================================
