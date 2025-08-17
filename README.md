@@ -16,7 +16,7 @@
 
 Enactivism frames cognition as **meaning-making through action**. Rather than building fixed internal representations, agents develop skills and significance via sensorimotor engagement.
 
-In **émile-mini** this looks like:
+In **émile-Mini** this looks like:
 
 * **Learning through doing** (experience changes behavior)
 * **Context sensitivity** (same stimulus, different meaning by history)
