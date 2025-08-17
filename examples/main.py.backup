@@ -2,9 +2,9 @@
 Entry point for the QSE-Émile cognitive simulation.
 Runs the agent, then visualizes key metrics.
 """
-from emile_mini.simulator import run_simulation
-from emile_mini.viz import plot_surplus_sigma, plot_context_timeline, plot_goal_timeline
-from emile_mini.config import CONFIG
+from simulator import run_simulation
+from viz import plot_surplus_sigma, plot_context_timeline, plot_goal_timeline
+from config import CONFIG
 
 if __name__ == "__main__":
     # Simulation parameters

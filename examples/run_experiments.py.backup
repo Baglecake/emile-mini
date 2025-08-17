@@ -6,9 +6,9 @@ Just run: python run_experiments.py
 
 import numpy as np
 from collections import Counter
-from emile_mini.config import CONFIG
-from emile_mini.agent import EmileAgent
-from emile_mini.viz import plot_surplus_sigma, plot_context_timeline, plot_goal_timeline
+from config import CONFIG
+from agent import EmileAgent
+from viz import plot_surplus_sigma, plot_context_timeline, plot_goal_timeline
 
 
 def run_experiment(name, steps, reward_pattern="mixed"):

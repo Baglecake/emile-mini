@@ -10,7 +10,7 @@ import matplotlib.pyplot as plt
 from collections import defaultdict, deque
 import time
 
-from emile_mini.maze_environment import DeceptiveMaze, QSEMazeAgent
+from maze_environment import DeceptiveMaze, QSEMazeAgent
 
 
 class StandardRLAgent:

@@ -9,8 +9,8 @@ import numpy as np
 import matplotlib.pyplot as plt
 from collections import defaultdict
 
-from emile_mini.agent import EmileAgent
-from emile_mini.config import CONFIG
+from agent import EmileAgent
+from config import CONFIG
 
 
 class StandardRLAgent:

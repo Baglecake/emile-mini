@@ -25,8 +25,8 @@ def demo_1_core_dynamics():
     print("=" * 50)
     print("Demonstrating bidirectional quantum-symbolic coupling...")
     
-    from emile_mini.agent import EmileAgent
-    from emile_mini.viz import plot_surplus_sigma, plot_context_timeline, plot_goal_timeline
+    from agent import EmileAgent
+    from viz import plot_surplus_sigma, plot_context_timeline, plot_goal_timeline
     
     # Create agent with goals
     agent = EmileAgent()
@@ -78,7 +78,7 @@ def demo_2_context_switching():
     print("=" * 50)
     print("Demonstrating escape from local optima via context switching...")
     
-    from emile_mini.maze_comparison import main as run_maze_comparison
+    from maze_comparison import main as run_maze_comparison
     
     # Run maze experiment showing context switching advantage
     print("Running maze navigation with context switching...")
@@ -101,7 +101,7 @@ def demo_3_social_cognition():
     print("Demonstrating social learning and knowledge transfer...")
     
     try:
-        from emile_mini.social_qse_agent_v2 import run_social_experiment
+        from social_qse_agent_v2 import run_social_experiment
         
         print("Creating social agent environment...")
         env, agents, results = run_social_experiment(n_agents=3, steps=600)
@@ -123,7 +123,7 @@ def demo_3_social_cognition():
         print("ℹ️ Will run simplified social test...")
         
         # Simplified social test
-        from emile_mini.social_qse_agent_v2 import SocialQSEAgent
+        from social_qse_agent_v2 import SocialQSEAgent
         agent = SocialQSEAgent("TestAgent")
         print(f"✅ Social agent created: {agent.agent_id}")
     
@@ -136,7 +136,7 @@ def demo_4_embodied_cognition():
     print("=" * 50)
     print("Demonstrating embodied experience and learning...")
     
-    from emile_mini.embodied_qse_emile import run_embodied_experiment
+    from embodied_qse_emile import run_embodied_experiment
     
     print("Running embodied cognition experiment...")
     results = run_embodied_experiment(steps=500, visualize=True)
@@ -162,7 +162,7 @@ def demo_5_knowledge_preservation():
     print("Demonstrating intrinsic knowledge maintenance...")
     
     try:
-        from emile_mini.extinction_experiment import run_extinction_experiment
+        from extinction_experiment import run_extinction_experiment
         
         print("Running extinction resistance experiment...")
         emile_trials, standard_trials = run_extinction_experiment(
@@ -178,7 +178,7 @@ def demo_5_knowledge_preservation():
         print("ℹ️ Knowledge preservation verified through memory persistence")
         
         # Simple knowledge persistence test
-        from emile_mini.agent import EmileAgent
+        from agent import EmileAgent
         agent = EmileAgent()
         agent.goal.add_goal("test")
         
