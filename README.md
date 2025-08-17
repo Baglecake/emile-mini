@@ -1,11 +1,11 @@
-# émile-Mini: a lite enactive learner
+# émile-Mini: a lite enactive learner  
+v0.1.3 
 
 [![Python 3.8+](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![University of Toronto](https://img.shields.io/badge/University%20of-Toronto-003F7F.svg)](https://www.utoronto.ca/)
 [![Research](https://img.shields.io/badge/Type-Research-brightgreen.svg)](https://github.com)
-
-v0.1.3  
+ 
 **émile-Mini** is a lightweight, packaged demo of **enactive cognition** for research and teaching. It shows how intelligent behavior can emerge from an agent’s ongoing interaction with its environment—no static world model required.
 
 * **Package name:** `emile-mini` (TestPyPI)
