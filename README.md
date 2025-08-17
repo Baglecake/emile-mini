@@ -32,16 +32,45 @@ In **émile-mini** this looks like:
 * **Episodic surplus logging**: per‑step memory summaries for analysis
 * **Proximity & energy models**: shared social detect radius and simple energy costs
 * **Visualization**: auto‑saves `enhanced_social_qse_analysis.png` (trajectories, proximities, strategies, signals/relationships)
+<img width="5970" height="4718" alt="image" src="https://github.com/user-attachments/assets/b98adff9-8711-4af5-a629-bfaa4ea54e52" />
 
-## 🆕 What’s new in v0.1.3
+---
 
-* Exposed **maze** and **extinction** demos via the CLI (`emile-mini maze`, `emile-mini extinction`).
+## 🆕 What else is new in v0.1.3?
+* **Experimental Module Exposure Through the CLI**: Experimental modules place émile-Mini in competition with standard RL models to show how émile-Mini's enactive learning approach boodsts performance beyond traditional reinforcement systems. The visuals below show the results of a maze challenge, where learners need to navigate a 2-d space to reach an objective, while avoiding traps disguised as ideal conditions. Results show how émile-Mini excels at challenges requiring adaptive decision making, changing context to avoid being caught in stasis or deceived by local optima. Context switching allows for émile-Mini to adapt policy to situation endogenously, offering a far more flexible set of actions than traditional RL models.
+  
+* Exposed **emile-mini maze** demo via the CLI (`emile-mini maze`, `emile-mini extinction`)
 <img width="4582" height="2550" alt="image" src="https://github.com/user-attachments/assets/5094b32c-75df-44f6-8b91-8d2ffc55bdb0" />
   
 <img width="4582" height="2550" alt="image" src="https://github.com/user-attachments/assets/5d698423-e9d0-414f-8103-a4a7883861ec" />
+  
+---
+  
+* Exposed **emile-mini extinction** demo via the CLI (`emile-mini extinction`)
+* Key Innovation: Intrinsic dynamics preserve knowledge without external rewards
+* Complementary to: Context-switching for escaping local optima
+  
+```
+==================================================
+EXTINCTION RESILIENCE ANALYSIS
+==================================================
+KNOWLEDGE PRESERVATION DURING EXTINCTION:
+  QSE-Émile:   0.49% of pre-extinction knowledge preserved
+  Standard RL: 0.00% of pre-extinction knowledge preserved
+  → Advantage: 0.49%
 
-    
--> Housekeeping:
+RECOVERY AFTER EXTINCTION:
+  QSE-Émile:   114.80% recovery vs pre-extinction
+  Standard RL: 0.00% recovery vs pre-extinction
+  → Advantage: 114.80%
+
+FINAL Q-VALUES:
+  QSE-Émile:   0.0611
+  Standard RL: 0.0219
+```
+  
+---
+-> **v0.1.3 Housekeeping**:
 * Refactored imports and broke circulars for packaged demos.
 * Added `-V/--version` flag and updated docs/examples table.
 * Packaging metadata tidy‑ups for TestPyPI.
