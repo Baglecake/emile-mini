@@ -1,0 +1,20 @@
+# Colab / Google Drive mounts
+drive/
+.config/
+
+# Python junk
+__pycache__/
+*.py[cod]
+*.egg-info/
+dist/
+build/
+
+# Notebooks & OS noise
+.ipynb_checkpoints/
+*.ipynb
+.DS_Store
+
+# Generated artifacts
+*.png
+*.jpg
+*.pdf
