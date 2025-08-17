@@ -12,7 +12,7 @@
 
 ## 🌱 What is enactive cognition?
 
-Enactivism frames cognition as **meaning‑making through action**. Rather than building fixed internal representations, agents develop skills and significance via sensorimotor engagement.
+Enactivism frames cognition as **meaning‑making through reciprocal environment-agent interaction**. Rather than building fixed internal representations, agents develop skills and interpret significance via sensorimotor engagement and qualia differentiation informed through context.
 
 In **émile-mini** this looks like:
 
