@@ -58,7 +58,7 @@ EXTINCTION RESILIENCE ANALYSIS
 KNOWLEDGE PRESERVATION DURING EXTINCTION:
   QSE-Émile:   0.49% of pre-extinction knowledge preserved
   Standard RL: 0.00% of pre-extinction knowledge preserved
-  → Advantage: 0.49%
+  → Advantage: 0.49% → (100% or infinite when Standard RL does not recover)
 
 RECOVERY AFTER EXTINCTION:
   QSE-Émile:   114.80% recovery vs pre-extinction
