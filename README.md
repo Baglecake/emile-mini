@@ -41,13 +41,17 @@ pip install -e .
 ### Basic Usage
 ```python
 from emile_mini import EmileAgent, EmbodiedEnvironment
+
 # Create an enactive agent
 agent = EmileAgent()
+
 # Add some basic goals (these will evolve through experience)
 for goal in ["explore", "maintain", "adapt"]:
 agent.goal.add_goal(goal)
+
 # Create an environment for embodied interaction
 env = EmbodiedEnvironment(size=15)
+
 # Run the enactive learning loop
 for step in range(1000):
 result = agent.embodied_step(env)
@@ -58,10 +62,13 @@ print(f"Step {step}: {result['action']} at {agent.body.state.position}")
 ```bash
 # Basic cognitive simulation
 python main.py
+
 # Embodied sensorimotor experiment
 python embodied_qse_emile.py
+
 # Social learning demonstration
 python social_qse_agent_v2.py
+
 # Comprehensive research suite
 python experiment_runner.py
 ```
