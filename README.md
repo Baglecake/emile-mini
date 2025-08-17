@@ -5,7 +5,7 @@
 [![Research](https://img.shields.io/badge/Research-MRP-orange.svg)](https://github.com/baglecake/emile-mini)
 
 
-A lightweight, accessible implementation of enactive cognition principles for research and education. Émile-mini demonstrates how intelligent behavior emerges from the dynamic interaction between an agent and its environment, without pre-programmed knowledge or fixed behavioral rules.
+A lightweight, accessible implementation of enactive cognition principles for research and education. émile-mini demonstrates how intelligent behavior emerges from the dynamic interaction between an agent and its environment, without pre-programmed knowledge or fixed behavioral rules.
   
 ## 🌱 What is Enactive Cognition?
 Enactive cognition proposes that intelligence isn't about processing information, but about **making meaning through interaction**. Instead of representing the world internally, agents create understanding by engaging with their environment and developing skills through experience.
@@ -74,6 +74,7 @@ python social_qse_agent_v2.py
 # Comprehensive research suite
 python experiment_runner.py
 ```
+  
 ## 📁 Project Structure
 ```
 emile-mini/
@@ -175,15 +176,16 @@ If you use Émile-mini in your research:
 ```bibtex
 @software{emile_mini_2025,
 author = {Coburn, Del},
-title = {Émile-Mini: A Lite Enactive Learner},
+title = {émile-Mini: A Lite Enactive Learner},
 url = {https://github.com/baglecake/emile-mini},
 year = {2025}
 }
 ```
 ## 📄 License
 MIT License - See [LICENSE](LICENSE) for details.
+  
 ## 🎓 Academic Context
-This project is part of an MRP (Major Research Paper) in computational cognitive science, exploring how enactive principles can be implemented in artificial systems to create more robust, adaptive, and meaningful forms of artificial intelligence.
+This project is part of an MRP (Major Research Paper) in computational sociology, exploring how enactive principles can be operationalized through social theory and applied to artificial systems, creating more robust, adaptive, and meaningful forms of artificial intelligence and Human-Computer Interaction.
 
 ---
 *"Intelligence is not about having the right representations, but about doing the right thing at the right time."* - Enactive Cognition Principle
