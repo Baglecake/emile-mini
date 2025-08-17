@@ -42,7 +42,7 @@ In **émile-Mini** this looks like:
 ---
 
 ## 🆕 What else is new in v0.1.3?
-* **Experimental Module Exposure Through the CLI**: Experimental modules place émile-Mini in competition with standard RL models to show how émile-Mini's enactive learning approach boodsts performance beyond traditional reinforcement systems. The visuals below show the results of a maze challenge, where learners need to navigate a 2-d space to reach an objective, while avoiding traps disguised as ideal conditions. Results show how émile-Mini excels at challenges requiring adaptive decision making, changing context to avoid being caught in stasis or deceived by local optima. Context switching allows for émile-Mini to adapt policy to situation endogenously, offering a far more flexible set of actions than traditional RL models.
+* **Experimental Module Exposure Through the CLI**: Experimental modules place émile-Mini in competition with standard RL models to show how émile-Mini's enactive learning approach boosts performance beyond traditional reinforcement systems. The visuals below show the results of a maze challenge, where learners need to navigate a 2-d space to reach an objective, while avoiding traps disguised as ideal conditions. Results show how émile-Mini excels at challenges requiring adaptive decision making, changing context to avoid being caught in stasis or deceived by local optima. Context switching allows for émile-Mini to adapt policy to situation endogenously, offering a far more flexible set of actions than traditional RL models.
 
 ##    
 ### 🆕 Exposed **emile-mini maze** demo via the CLI (`emile-mini maze`, `emile-mini extinction`)
