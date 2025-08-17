@@ -14,7 +14,7 @@
 
 Enactivism frames cognition as **meaning‑making through reciprocal environment-agent interaction**. Rather than building fixed internal representations, agents develop skills and interpret significance via sensorimotor engagement and qualia differentiation informed through context.
 
-In **émile-mini** this looks like:
+In **émile-Mini** this looks like:
 
 * **Learning through doing** (experience changes behavior)
 * **Context sensitivity** (same stimulus, different meaning by history)
