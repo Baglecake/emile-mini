@@ -144,9 +144,9 @@ env, agents, analysis = run_social_experiment(
 ```
 -> Then, examine the data collected by the simulation for further insight:
 
-# --- Demo Insights --- (examples)
+**--- Demo Insights ---** (example)
   
-* **Final Agent Positions**
+* -> **Final Agent Positions**
 ```
 print("\n--- Simulation Insights ---")
 
@@ -161,7 +161,7 @@ for agent in agents:
         print(f"{agent.agent_id}: No position history recorded")
 ```
   
-* **Knowledge Gained and Embodied Cognition Mapping (social strategy)**
+* -> **Knowledge Gained and Embodied Cognition Mapping (social strategy)**
 ```
 # Print insights into knowledge gained and behaviors (social strategy)
 print("\nAgent Knowledge and Social Strategy:")
@@ -184,7 +184,7 @@ for agent in agents:
         print("  Embodied Knowledge: None gained")
 ```
 
-# --- Simulation Insights --- (example)
+**--- Simulation Insights ---** (example)
 ```
 Final Agent Positions:
 Agent_0: (1, 1)
