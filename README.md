@@ -248,11 +248,11 @@ emile_mini/
 
 ---
 
-## 🧪 Examples & demo scripts (from source)
-
+## 🧪 Examples & demo scripts (from source)  
 Most research scripts live in the repository; two popular demos are accessible via the CLI, and the rest can be run from source.
 
 * CLI equivalents: `emile-mini maze`, `emile-mini extinction`
+  -> For Running Programmatically:
 
 | Script                               | What it does                                         | How to run                                  |
 | ------------------------------------ | ---------------------------------------------------- | ------------------------------------------- |
