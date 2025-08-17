@@ -170,6 +170,11 @@ class CognitiveStory:
 
 
 if __name__ == '__main__':
+    # Add path so experiment_runner can be found
+    import sys
+    import os
+    sys.path.append(os.path.dirname(os.path.abspath(__file__)))
+    
     # We need to run the experiments first to get the results
     from experiment_runner import main as run_suite
 
