@@ -3,6 +3,8 @@
 [![Python 3.9+](https://img.shields.io/badge/python-3.9+-blue.svg)](https://www.python.org/downloads/)
 [![MIT License](https://img.shields.io/badge/License-MIT-green.svg)](https://choosealicense.com/licenses/mit/)
 [![Research](https://img.shields.io/badge/Research-MRP-orange.svg)](https://github.com/baglecake/emile-mini)
+
+  
 A lightweight, accessible implementation of enactive cognition principles for research and education. Émile-mini demonstrates how intelligent behavior emerges from the dynamic interaction between an agent and its environment, without pre-programmed knowledge or fixed behavioral rules.
   
 ## 🌱 What is Enactive Cognition?
