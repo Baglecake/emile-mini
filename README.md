@@ -1,6 +1,6 @@
-# émile-mini: a lite enactive learner
+# émile-Mini: a lite enactive learner
 
-**émile-mini** is a lightweight, packaged demo of **enactive cognition** for research and teaching. It shows how intelligent behavior can emerge from an agent’s ongoing interaction with its environment—no static world model required.
+**émile-Mini** is a lightweight, packaged demo of **enactive cognition** for research and teaching. It shows how intelligent behavior can emerge from an agent’s ongoing interaction with its environment—no static world model required.
 
 * **Package name:** `emile-mini` (TestPyPI)
 * **Import path:** `emile_mini`
@@ -166,10 +166,10 @@ Most research scripts live in the repository; two popular demos are accessible v
 
 ## 🎓 Method & research framing
 
-* **MRP context.** *émile‑mini* is part of a Major Research Paper exploring how **enactive cognition** can be implemented and studied in artificial systems.
+* **MRP context.** *émile‑Mini* is part of a Major Research Paper exploring how **enactive cognition** can be implemented and studied in artificial systems.
 * **Computational autoethnography.** The project treats system‑building, debugging, and run logs as first‑person empirical material. The researcher is a participant in the process; design moves, failures, and reframings are data that connect architecture → behavior → interpretation.
 * **Empirical semiotics (meaning‑as‑change).** We measure meaning by **observable reconfiguration** in the agent–environment system (e.g., proximity dynamics, memory traces, strategy shifts) produced by architectural impositions and interactions.
-* **Relation to émile‑cogito.** *émile‑mini* packages a concrete slice of a broader platform (Émile/“émile‑cogito”) exploring multi‑module orchestration (QSE core; symbolic, context, goal, and memory stacks; orchestration patterns like RAO/EAO). Here, *émile‑mini* focuses on a reproducible **social learning** scenario for demos and analysis.
+* **Relation to Émile‑cogito.** *émile‑Mini* packages a concrete slice of a broader platform (Émile‑cogito”) exploring multi‑module orchestration (QSE core; symbolic, context, goal, and memory stacks; orchestration patterns). Here, *émile‑Mini* focuses on a reproducible **social learning** scenario for demos and analysis.
 
 ---
 
