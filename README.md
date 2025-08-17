@@ -1,6 +1,11 @@
-# émile-Mini: a lite enactive learner
-(v0.1.3)
-  
+# émile-Mini: a lite enactive learner  
+v0.1.3 
+
+[![Python 3.8+](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![University of Toronto](https://img.shields.io/badge/University%20of-Toronto-003F7F.svg)](https://www.utoronto.ca/)
+[![Research](https://img.shields.io/badge/Type-Research-brightgreen.svg)](https://github.com)
+ 
 **émile-Mini** is a lightweight, packaged demo of **enactive cognition** for research and teaching. It shows how intelligent behavior can emerge from an agent’s ongoing interaction with its environment—no static world model required.
 
 * **Package name:** `emile-mini` (TestPyPI)
@@ -12,9 +17,9 @@
 
 ## 🌱 What is enactive cognition?
 
-Enactivism frames cognition as **meaning‑making through action**. Rather than building fixed internal representations, agents develop skills and significance via sensorimotor engagement.
+Enactivism frames cognition as **meaning‑making through reciprocal environment-agent interaction**. Rather than building fixed internal representations, agents develop skills and interpret significance via sensorimotor engagement and qualia differentiation informed through context.
 
-In **émile-mini** this looks like:
+In **émile-Mini** this looks like:
 
 * **Learning through doing** (experience changes behavior)
 * **Context sensitivity** (same stimulus, different meaning by history)
@@ -32,14 +37,45 @@ In **émile-mini** this looks like:
 * **Episodic surplus logging**: per‑step memory summaries for analysis
 * **Proximity & energy models**: shared social detect radius and simple energy costs
 * **Visualization**: auto‑saves `enhanced_social_qse_analysis.png` (trajectories, proximities, strategies, signals/relationships)
+<img width="5970" height="4718" alt="image" src="https://github.com/user-attachments/assets/b98adff9-8711-4af5-a629-bfaa4ea54e52" />
 
-## 🆕 What’s new in v0.1.3
+---
 
-* Exposed **maze** and **extinction** demos via the CLI (`emile-mini maze`, `emile-mini extinction`).
+## 🆕 What else is new in v0.1.3?
+* **Experimental Module Exposure Through the CLI**: Experimental modules place émile-Mini in competition with standard RL models to show how émile-Mini's enactive learning approach boosts performance beyond traditional reinforcement systems. The visuals below show the results of a maze challenge, where learners need to navigate a 2-d space to reach an objective, while avoiding traps disguised as ideal conditions. Results show how émile-Mini excels at challenges requiring adaptive decision making, changing context to avoid being caught in stasis or deceived by local optima. Context switching allows for émile-Mini to adapt policy to situation endogenously, offering a far more flexible set of actions than traditional RL models.
+
+##    
+### 🆕 Exposed: **emile-mini maze** demo via the CLI (`emile-mini maze`, `emile-mini extinction`)
+<img width="4582" height="2550" alt="image" src="https://github.com/user-attachments/assets/5094b32c-75df-44f6-8b91-8d2ffc55bdb0" />
+  
 <img width="4582" height="2550" alt="image" src="https://github.com/user-attachments/assets/5d698423-e9d0-414f-8103-a4a7883861ec" />
+  
+---
+##   
+### 🆕 Exposed: **emile-mini extinction** demo via the CLI (`emile-mini extinction`)
+* -> Key Innovation: Intrinsic QSE dynamics preserve knowledge without external rewards
+* -> Complementary to: Context-switching for escaping local optima  
+```
+==================================================
+EXTINCTION RESILIENCE ANALYSIS
+==================================================
+KNOWLEDGE PRESERVATION DURING EXTINCTION:
+  QSE-Émile:   0.49% of pre-extinction knowledge preserved
+  Standard RL: 0.00% of pre-extinction knowledge preserved
+  → Advantage: 0.49% → (100% or infinite when Standard RL does not recover)
 
-    
--> Housekeeping:
+RECOVERY AFTER EXTINCTION:
+  QSE-Émile:   114.80% recovery vs pre-extinction
+  Standard RL: 0.00% recovery vs pre-extinction
+  → Advantage: 114.80%
+
+FINAL Q-VALUES:
+  QSE-Émile:   0.0611
+  Standard RL: 0.0219
+```
+  
+---
+-> **v0.1.3 Housekeeping**:
 * Refactored imports and broke circulars for packaged demos.
 * Added `-V/--version` flag and updated docs/examples table.
 * Packaging metadata tidy‑ups for TestPyPI.
@@ -95,17 +131,89 @@ The run logs social events and saves a figure as `enhanced_social_qse_analysis.p
 
 ```python
 from emile_mini.social_qse_agent_v2 import run_social_experiment
+import numpy as np # Import numpy for potential calculations
 
+# Run the social experiment simulation
 env, agents, analysis = run_social_experiment(
-    n_agents=3,
-    steps=120,
+    n_agents=5,
+    steps=500,
     cluster_spawn=True,
     cluster_radius=4,
 )
+```
+-> Then, examine the data collected by the simulation for further insight:
 
-print(analysis["spatial"]["Agent_0"])  # example: proximity stats for Agent_0
+**--- Demo Insights ---** (example)
+  
+* -> **Final Agent Positions**
+```
+print("\n--- Simulation Insights ---")
+
+# Display the final positions of the agents
+print("\nFinal Agent Positions:")
+for agent in agents:
+    # Access the last position from the position_history
+    if agent.position_history:
+        final_position = agent.position_history[-1]
+        print(f"{agent.agent_id}: {final_position}")
+    else:
+        print(f"{agent.agent_id}: No position history recorded")
+```
+  
+* -> **Knowledge Gained and Embodied Cognition Mapping (social strategy)**
+```
+# Print insights into knowledge gained and behaviors (social strategy)
+print("\nAgent Knowledge and Social Strategy:")
+for agent in agents:
+    print(f"\n{agent.agent_id}:")
+    print(f"  Final Social Strategy: {agent.current_social_strategy}")
+
+    # Show embodied mappings (knowledge gained)
+    if agent.embodied_mappings:
+        print(f"  Embodied Knowledge:")
+        for category, values in agent.embodied_mappings.items():
+            # Calculate and display a summary of learned knowledge for each category
+            if values:
+                 # Corrected: values is already a list, no need for .values()
+                 avg_value = np.mean(values)
+                 print(f"    {category}: learned about {len(values)} items, avg value={avg_value:.2f}")
+            else:
+                 print(f"    {category}: learned about 0 items")
+    else:
+        print("  Embodied Knowledge: None gained")
 ```
 
+**--- Simulation Insights ---** (example)
+```
+Final Agent Positions:
+Agent_0: (1, 1)
+Agent_1: (3, 1)
+Agent_2: (1, 1)
+Agent_3: (1, 1)
+Agent_4: (1, 1)
+
+Agent Knowledge and Social Strategy:
+
+Agent_0:
+  Final Social Strategy: independent
+  Embodied Knowledge:
+    crimson_fruit: learned about 6 items, avg value=-0.90
+    blue_fruit: learned about 1 items, avg value=0.35
+
+Agent_1:
+  Final Social Strategy: independent
+  Embodied Knowledge:
+    crimson_fruit: learned about 2 items, avg value=-0.90
+    blue_fruit: learned about 2 items, avg value=0.35
+
+... etc. (values for fruits will be identical, but the number of items learned will vary)
+
+```
+* You could add other insights here, for example:  
+ -> Summary of actions taken (from **action_history**)  
+ -> Analysis of social interactions (from **social_knowledge_transfer** or **social_memory**)  
+---
+  
 ### Version in code
 
 ```python
@@ -140,12 +248,12 @@ emile_mini/
 
 ---
 
-## 🧪 Examples & demo scripts (from source)
-
+## 🧪 Examples & demo scripts (from source)  
 Most research scripts live in the repository; two popular demos are accessible via the CLI, and the rest can be run from source.
 
-* CLI equivalents: `emile-mini maze`, `emile-mini extinction`
-
+* CLI equivalents: `emile-mini maze`, `emile-mini extinction`  
+  -> Programmatic options:
+```.md
 | Script                               | What it does                                         | How to run                                  |
 | ------------------------------------ | ---------------------------------------------------- | ------------------------------------------- |
 | `visual_maze_demo.py`                | Visual maze demo with rich plots                     | `python visual_maze_demo.py`                |
@@ -162,7 +270,7 @@ Most research scripts live in the repository; two popular demos are accessible v
 | `audit_emile_mini.py`                | Quick import/config audit harness                    | `python audit_emile_mini.py`                |
 
 > Tips: most scripts accept flags (try `-h`). Results and figures are saved alongside the run unless the script specifies an output directory.
-
+```
 ---
 
 ## 🎓 Method & research framing
