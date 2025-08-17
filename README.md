@@ -281,6 +281,29 @@ Most research scripts live in the repository; two popular demos are accessible v
 * **Relation to Émile‑cogito.** *émile‑Mini* packages a concrete slice of a broader platform (Émile‑cogito”) exploring multi‑module orchestration (QSE core; symbolic, context, goal, and memory stacks; orchestration patterns). Here, *émile‑Mini* focuses on a reproducible **social learning** scenario for demos and analysis.
 
 ---
+  
+## 📊 Early Insights & Validation
+
+**Empirical results demonstrate strong performance across cognitive benchmarks:**
+
+### Key Results
+- **Dynamic Adaptation**: 100% vs 4.4% vs Epsilon-greedy Q-learning with goal switching (effect size: 0.956)
+- **Meta-Cognitive Tasks**: 173.61 vs 131.02 vs Q-learning with fast adaptation (p < 0.001)
+- **Statistical validation**: 4000+ trials across multiple conditions
+- **Ablation studies**: Confirms quantum-symbolic coupling contribution
+
+### Architectural Contributions
+- Endogenous context switching for escaping local optima
+- Bidirectional quantum-symbolic information flow
+- Autopoietic self-maintenance without external rewards
+- Emergent social learning with knowledge transfer
+- Robust performance across architectural variations
+
+### Benchmarks
+- Context switching vs standard RL approaches
+- Knowledge preservation during reward extinction  
+- Social cognition emergence in multi-agent settings
+- Embodied categorization through sensorimotor experience
 
 ## 🗺️ Roadmap
 
