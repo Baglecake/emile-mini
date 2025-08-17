@@ -36,6 +36,8 @@ In **émile-mini** this looks like:
 ## 🆕 What’s new in v0.1.3
 
 * Exposed **maze** and **extinction** demos via the CLI (`emile-mini maze`, `emile-mini extinction`).
+<img width="4582" height="2550" alt="image" src="https://github.com/user-attachments/assets/5094b32c-75df-44f6-8b91-8d2ffc55bdb0" />
+  
 <img width="4582" height="2550" alt="image" src="https://github.com/user-attachments/assets/5d698423-e9d0-414f-8103-a4a7883861ec" />
 
     
