@@ -253,7 +253,7 @@ Most research scripts live in the repository; two popular demos are accessible v
 
 * CLI equivalents: `emile-mini maze`, `emile-mini extinction`  
   -> Programmatic options:
-
+```.md
 | Script                               | What it does                                         | How to run                                  |
 | ------------------------------------ | ---------------------------------------------------- | ------------------------------------------- |
 | `visual_maze_demo.py`                | Visual maze demo with rich plots                     | `python visual_maze_demo.py`                |
@@ -270,7 +270,7 @@ Most research scripts live in the repository; two popular demos are accessible v
 | `audit_emile_mini.py`                | Quick import/config audit harness                    | `python audit_emile_mini.py`                |
 
 > Tips: most scripts accept flags (try `-h`). Results and figures are saved alongside the run unless the script specifies an output directory.
-
+```
 ---
 
 ## 🎓 Method & research framing
