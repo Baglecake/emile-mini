@@ -54,8 +54,7 @@ In **émile-Mini** this looks like:
 ##   
 ### 🆕 Exposed: **emile-mini extinction** demo via the CLI (`emile-mini extinction`)
 * -> Key Innovation: Intrinsic QSE dynamics preserve knowledge without external rewards
-* -> Complementary to: Context-switching for escaping local optima
-  
+* -> Complementary to: Context-switching for escaping local optima  
 ```
 ==================================================
 EXTINCTION RESILIENCE ANALYSIS
