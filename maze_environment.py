@@ -9,11 +9,9 @@ import numpy as np
 import matplotlib.pyplot as plt
 from collections import defaultdict
 import time
-from .config import CONFIG
-from .agent import EmileAgent
-from typing import TYPE_CHECKING
-if TYPE_CHECKING:
-    from .maze_comparison import StandardRLAgent  # only for typing, no runtime cycle
+
+from config import CONFIG
+from agent import EmileAgent
 
 
 class DeceptiveMaze:

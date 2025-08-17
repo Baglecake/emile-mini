@@ -13,7 +13,7 @@ import matplotlib.patches as patches
 from pathlib import Path
 
 from .maze_environment import DeceptiveMaze, QSEMazeAgent
-from maze_comparison import StandardRLAgent
+from .maze_comparison import StandardRLAgent
 
 
 class VisualMazeDemo:
