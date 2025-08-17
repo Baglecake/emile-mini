@@ -209,9 +209,9 @@ Agent_1:
 ... etc. (values for fruits will be identical, but the number of items learned will vary)
 
 ```
-* You could add other insights here, for example:
- -> Summary of actions taken (from **action_history**)
- -> Analysis of social interactions (from **social_knowledge_transfer** or **social_memory**)
+* You could add other insights here, for example:  
+ -> Summary of actions taken (from **action_history**)  
+ -> Analysis of social interactions (from **social_knowledge_transfer** or **social_memory**)  
 ---
   
 ### Version in code
