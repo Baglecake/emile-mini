@@ -10,12 +10,14 @@ except PackageNotFoundError:
 from .config import QSEConfig
 from .embodied_qse_emile import EmbodiedQSEAgent, EmbodiedEnvironment, SensoriMotorBody
 from .social_qse_agent_v2 import SocialQSEAgent, SocialEnvironment, run_social_experiment
+from .agent import EmileAgent
 
 __all__ = [
     "__version__",
     "QSEConfig",
     "EmbodiedQSEAgent",
     "EmbodiedEnvironment",
+    "EmileAgent",
     "SensoriMotorBody",
     "SocialQSEAgent",
     "SocialEnvironment",
