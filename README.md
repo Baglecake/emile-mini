@@ -40,14 +40,14 @@ In **émile-Mini** this looks like:
 * **Experimental Module Exposure Through the CLI**: Experimental modules place émile-Mini in competition with standard RL models to show how émile-Mini's enactive learning approach boodsts performance beyond traditional reinforcement systems. The visuals below show the results of a maze challenge, where learners need to navigate a 2-d space to reach an objective, while avoiding traps disguised as ideal conditions. Results show how émile-Mini excels at challenges requiring adaptive decision making, changing context to avoid being caught in stasis or deceived by local optima. Context switching allows for émile-Mini to adapt policy to situation endogenously, offering a far more flexible set of actions than traditional RL models.
 
 ##    
-🆕 Exposed **emile-mini maze** demo via the CLI (`emile-mini maze`, `emile-mini extinction`)
+### 🆕 Exposed **emile-mini maze** demo via the CLI (`emile-mini maze`, `emile-mini extinction`)
 <img width="4582" height="2550" alt="image" src="https://github.com/user-attachments/assets/5094b32c-75df-44f6-8b91-8d2ffc55bdb0" />
   
 <img width="4582" height="2550" alt="image" src="https://github.com/user-attachments/assets/5d698423-e9d0-414f-8103-a4a7883861ec" />
   
 ---
 ##   
-🆕 Exposed **emile-mini extinction** demo via the CLI (`emile-mini extinction`)
+### 🆕 Exposed **emile-mini extinction** demo via the CLI (`emile-mini extinction`)
 * -> Key Innovation: Intrinsic dynamics preserve knowledge without external rewards
 * -> Complementary to: Context-switching for escaping local optima
   
@@ -127,17 +127,89 @@ The run logs social events and saves a figure as `enhanced_social_qse_analysis.p
 
 ```python
 from emile_mini.social_qse_agent_v2 import run_social_experiment
+import numpy as np # Import numpy for potential calculations
 
+# Run the social experiment simulation
 env, agents, analysis = run_social_experiment(
-    n_agents=3,
-    steps=120,
+    n_agents=5,
+    steps=500,
     cluster_spawn=True,
     cluster_radius=4,
 )
+```
+-> Then, examine the data collected by the simulation for further insight:
 
-print(analysis["spatial"]["Agent_0"])  # example: proximity stats for Agent_0
+# --- Demo Insights --- (examples)
+  
+* **Final Agent Positions**
+```
+print("\n--- Simulation Insights ---")
+
+# Display the final positions of the agents
+print("\nFinal Agent Positions:")
+for agent in agents:
+    # Access the last position from the position_history
+    if agent.position_history:
+        final_position = agent.position_history[-1]
+        print(f"{agent.agent_id}: {final_position}")
+    else:
+        print(f"{agent.agent_id}: No position history recorded")
+```
+  
+* **Knowledge Gained and Embodied Cognition Mapping (social strategy)**
+```
+# Print insights into knowledge gained and behaviors (social strategy)
+print("\nAgent Knowledge and Social Strategy:")
+for agent in agents:
+    print(f"\n{agent.agent_id}:")
+    print(f"  Final Social Strategy: {agent.current_social_strategy}")
+
+    # Show embodied mappings (knowledge gained)
+    if agent.embodied_mappings:
+        print(f"  Embodied Knowledge:")
+        for category, values in agent.embodied_mappings.items():
+            # Calculate and display a summary of learned knowledge for each category
+            if values:
+                 # Corrected: values is already a list, no need for .values()
+                 avg_value = np.mean(values)
+                 print(f"    {category}: learned about {len(values)} items, avg value={avg_value:.2f}")
+            else:
+                 print(f"    {category}: learned about 0 items")
+    else:
+        print("  Embodied Knowledge: None gained")
 ```
 
+# --- Simulation Insights --- (example)
+```
+Final Agent Positions:
+Agent_0: (1, 1)
+Agent_1: (3, 1)
+Agent_2: (1, 1)
+Agent_3: (1, 1)
+Agent_4: (1, 1)
+
+Agent Knowledge and Social Strategy:
+
+Agent_0:
+  Final Social Strategy: independent
+  Embodied Knowledge:
+    crimson_fruit: learned about 6 items, avg value=-0.90
+    blue_fruit: learned about 1 items, avg value=0.35
+
+Agent_1:
+  Final Social Strategy: independent
+  Embodied Knowledge:
+    crimson_fruit: learned about 2 items, avg value=-0.90
+    blue_fruit: learned about 2 items, avg value=0.35
+
+... etc. (values for fruits will be identical, but the number of items learned will vary)
+
+```
+# You could add other insights here, for example:
+# - Summary of actions taken (from action_history)
+# - Analysis of social interactions (from social_knowledge_transfer or social_memory)
+---
+  
 ### Version in code
 
 ```python
