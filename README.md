@@ -1,5 +1,6 @@
 # émile-Mini: a lite enactive learner
-
+(v0.1.3)
+  
 **émile-Mini** is a lightweight, packaged demo of **enactive cognition** for research and teaching. It shows how intelligent behavior can emerge from an agent’s ongoing interaction with its environment—no static world model required.
 
 * **Package name:** `emile-mini` (TestPyPI)
