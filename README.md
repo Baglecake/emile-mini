@@ -84,11 +84,37 @@ Performance advantage holds across obstacle densities (0.1-0.3) and target quadr
 ## 📦 Installation
 
 ### From source (recommended)
-```bash
-git clone https://github.com/Baglecake/emile-mini.git
+
+<h4>HTTPS</h4>
+<pre><code>git clone https://github.com/Baglecake/emile-mini.git
 cd emile-mini
 pip install -e .
-```
+</code></pre>
+
+<h4>SSH (if you use keys)</h4>
+<pre><code>git clone git@github.com:Baglecake/emile-mini.git
+cd emile-mini
+pip install -e .
+</code></pre>
+
+<h4>Exact version (this release)</h4>
+<pre><code>git fetch --tags
+git checkout v0.2.0
+pip install -e .
+</code></pre>
+
+<h4>Shallow clone of just this tag (faster)</h4>
+<pre><code>git clone --depth 1 --branch v0.2.0 https://github.com/Baglecake/emile-mini.git
+cd emile-mini
+pip install -e .
+</code></pre>
+
+<h4>Colab quickstart</h4>
+<pre><code>!git clone -q https://github.com/Baglecake/emile-mini.git
+%cd emile-mini
+!pip install -e .
+</code></pre>
+
 
 ### From TestPyPI
 ```bash
