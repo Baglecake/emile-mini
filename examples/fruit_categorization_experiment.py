@@ -14,7 +14,7 @@ import time
 
 # Import existing modules
 from emile_mini.embodied_qse_emile import EmbodiedQSEAgent, EmbodiedEnvironment, SensoriMotorBody
-from emile_mini.config import QSEConfig
+from config import QSEConfig
 
 class FruitEnvironment(EmbodiedEnvironment):
     """FIXED: Specialized environment for fruit categorization experiment"""

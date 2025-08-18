@@ -14,8 +14,8 @@ import matplotlib.pyplot as plt
 from collections import defaultdict, deque
 import time
 from pathlib import Path
-from emile_mini.agent import EmileAgent  
-from emile_mini.config import QSEConfig
+from agent import EmileAgent  
+from config import QSEConfig
 import json
 
 # ==================== 1. DYNAMIC ENVIRONMENT ADAPTATION ====================
