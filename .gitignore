@@ -33,3 +33,19 @@ runs/
 .DS_Store
 __pycache__/
 .ipynb_checkpoints/
+
+# artifacts & caches
+*.zip
+*.pt
+*.pth
+*.ckpt
+*.onnx
+*.npz
+*.npy
+wandb/
+runs/
+dist/
+build/
+*.egg-info/
+.pytest_cache/
+.ipynb_checkpoints/

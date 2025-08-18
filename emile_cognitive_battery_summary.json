@@ -1,0 +1,112 @@
+{
+  "A_solo": {
+    "total_reward": {
+      "mean": 28.159999999999975,
+      "std": 10.699084072947542
+    },
+    "steps": {
+      "mean": 200.0,
+      "std": 0.0
+    },
+    "energy_used": {
+      "mean": 0.20188599999999957,
+      "std": 0.018426696502627495
+    },
+    "path_len": {
+      "mean": 1.8,
+      "std": 0.4000000000000001
+    },
+    "unique_cells": {
+      "mean": 2.4,
+      "std": 0.4898979485566356
+    },
+    "osc_events": {
+      "mean": 0.0,
+      "std": 0.0
+    }
+  },
+  "C1_context_switch": {
+    "total_reward": {
+      "mean": 41.75555555555564,
+      "std": 11.782954837024585
+    },
+    "steps": {
+      "mean": 300.0,
+      "std": 122.47448713915891
+    },
+    "energy_used": {
+      "mean": 0.3014977777777782,
+      "std": 0.12068884775669868
+    },
+    "osc_events": {
+      "mean": 0.0,
+      "std": 0.0
+    }
+  },
+  "C2_memory_cued": {
+    "total_reward": {
+      "mean": 3.642640687119286,
+      "std": 2.9742036665811193
+    },
+    "steps": {
+      "mean": 7.2,
+      "std": 5.1146847410177685
+    },
+    "cue_follow_rate": {
+      "mean": 0.42666666666666664,
+      "std": 0.3517574922206112
+    },
+    "energy_used": {
+      "mean": 0.0,
+      "std": 0.0
+    },
+    "path_len": {
+      "mean": 5.2,
+      "std": 4.261455150532504
+    },
+    "unique_cells": {
+      "mean": 6.2,
+      "std": 4.261455150532504
+    },
+    "osc_events": {
+      "mean": 0.0,
+      "std": 0.0
+    }
+  },
+  "Handcrafted_compare": {
+    "success_rate": {
+      "mean": 0.23,
+      "std": 0.0
+    },
+    "avg_return": {
+      "mean": 0.8048490951121294,
+      "std": 0.0
+    },
+    "avg_steps": {
+      "mean": 62.935,
+      "std": 0.0
+    },
+    "avg_spl": {
+      "mean": 0.2239516594516594,
+      "std": 0.0
+    }
+  },
+  "PPO_compare": {
+    "success_rate": {
+      "mean": 0.12,
+      "std": 0.0
+    },
+    "avg_return": {
+      "mean": 0.6957097479583682,
+      "std": 0.0
+    },
+    "avg_steps": {
+      "mean": 71.08,
+      "std": 0.0
+    },
+    "avg_spl": {
+      "mean": 0.1670068681318681,
+      "std": 0.0
+    }
+  }
+}
