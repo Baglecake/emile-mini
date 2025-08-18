@@ -18,3 +18,18 @@ build/
 *.png
 *.jpg
 *.pdf
+# Model/checkpoint artifacts
+*.zip
+*.pt
+*.pth
+*.ckpt
+*.onnx
+*.npz
+*.npy
+wandb/
+runs/
+
+# OS/editor cruft
+.DS_Store
+__pycache__/
+.ipynb_checkpoints/

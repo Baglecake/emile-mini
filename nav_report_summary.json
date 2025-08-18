@@ -1,0 +1,134 @@
+{
+  "obstacles": {
+    "0.1": {
+      "PPO baseline": {
+        "episodes": 400,
+        "success_mean": 0.1025,
+        "SPL_mean": 0.12749175824175826,
+        "steps_mean": 72.2675,
+        "return_mean": -0.9977210486650253
+      },
+      "\u00c9MILE-MINI": {
+        "episodes": 400,
+        "success_mean": 0.645,
+        "SPL_mean": 0.6552117982206991,
+        "steps_mean": 35.4225,
+        "return_mean": 0.9237111215153254
+      }
+    },
+    "0.2": {
+      "PPO baseline": {
+        "episodes": 400,
+        "success_mean": 0.0875,
+        "SPL_mean": 0.12204054972804972,
+        "steps_mean": 73.385,
+        "return_mean": -2.934081061210814
+      },
+      "\u00c9MILE-MINI": {
+        "episodes": 400,
+        "success_mean": 0.47,
+        "SPL_mean": 0.4734696191321578,
+        "steps_mean": 47.27,
+        "return_mean": -1.6541212920690804
+      }
+    },
+    "0.3": {
+      "PPO baseline": {
+        "episodes": 400,
+        "success_mean": 0.0975,
+        "SPL_mean": 0.12447137584637585,
+        "steps_mean": 72.7725,
+        "return_mean": -3.890748223341405
+      },
+      "\u00c9MILE-MINI": {
+        "episodes": 400,
+        "success_mean": 0.405,
+        "SPL_mean": 0.41403718555266544,
+        "steps_mean": 51.3875,
+        "return_mean": -2.7652880705744436
+      }
+    }
+  },
+  "quadrant": {
+    "C": {
+      "PPO baseline": {
+        "episodes": 400,
+        "success_mean": 0.065,
+        "SPL_mean": 0.08455555555555555,
+        "steps_mean": 75.045,
+        "return_mean": -3.086920753029657
+      },
+      "\u00c9MILE-MINI": {
+        "episodes": 400,
+        "success_mean": 0.475,
+        "SPL_mean": 0.47050212216833737,
+        "steps_mean": 46.385,
+        "return_mean": -2.076691378069604
+      }
+    },
+    "NE": {
+      "PPO baseline": {
+        "episodes": 400,
+        "success_mean": 0.0875,
+        "SPL_mean": 0.12204054972804972,
+        "steps_mean": 73.385,
+        "return_mean": -2.934081061210814
+      },
+      "\u00c9MILE-MINI": {
+        "episodes": 400,
+        "success_mean": 0.47,
+        "SPL_mean": 0.4734696191321578,
+        "steps_mean": 47.27,
+        "return_mean": -1.6541212920690804
+      }
+    },
+    "NW": {
+      "PPO baseline": {
+        "episodes": 400,
+        "success_mean": 0.065,
+        "SPL_mean": 0.11083333333333333,
+        "steps_mean": 74.9275,
+        "return_mean": -2.2693230929801462
+      },
+      "\u00c9MILE-MINI": {
+        "episodes": 400,
+        "success_mean": 0.455,
+        "SPL_mean": 0.42834581040653363,
+        "steps_mean": 48.255,
+        "return_mean": -1.8817021483562781
+      }
+    },
+    "SE": {
+      "PPO baseline": {
+        "episodes": 400,
+        "success_mean": 0.0725,
+        "SPL_mean": 0.081875,
+        "steps_mean": 74.405,
+        "return_mean": -2.6784925012653775
+      },
+      "\u00c9MILE-MINI": {
+        "episodes": 400,
+        "success_mean": 0.475,
+        "SPL_mean": 0.48423125975331854,
+        "steps_mean": 46.805,
+        "return_mean": -1.6729830958829834
+      }
+    },
+    "SW": {
+      "PPO baseline": {
+        "episodes": 400,
+        "success_mean": 0.0575,
+        "SPL_mean": 0.06963095238095239,
+        "steps_mean": 75.52,
+        "return_mean": -2.322812102080135
+      },
+      "\u00c9MILE-MINI": {
+        "episodes": 400,
+        "success_mean": 0.455,
+        "SPL_mean": 0.44205512447598866,
+        "steps_mean": 48.4825,
+        "return_mean": -1.8387915876122305
+      }
+    }
+  }
+}
