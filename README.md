@@ -83,36 +83,76 @@ Performance advantage holds across obstacle densities (0.1-0.3) and target quadr
 
 ## 📦 Installation
 
+**Requirements**
+- Python 3.8–3.12
+- pip (latest recommended)
+- *(Optional, for PPO baseline)* gymnasium ≥ 0.28, stable-baselines3 ≥ 2.3.0
+
+**Tip:** Use a virtual environment to avoid system-package conflicts.
+
+<h4>1) Create & activate a virtual environment (optional but recommended)</h4>
+<pre><code class="language-bash"># Unix / macOS
+python -m venv .venv
+source .venv/bin/activate
+python -m pip install --upgrade pip wheel
+</code></pre>
+
+<pre><code class="language-bash"># Windows (PowerShell)
+python -m venv .venv
+.venv\Scripts\Activate.ps1
+python -m pip install --upgrade pip wheel
+</code></pre>
+
+---
+
 ### From source (recommended)
 
 <h4>HTTPS</h4>
-<pre><code>git clone https://github.com/Baglecake/emile-mini.git
+<pre><code class="language-bash">git clone https://github.com/Baglecake/emile-mini.git
 cd emile-mini
-pip install -e .
+python -m pip install -e .
 </code></pre>
 
 <h4>SSH (if you use keys)</h4>
-<pre><code>git clone git@github.com:Baglecake/emile-mini.git
+<pre><code class="language-bash">git clone git@github.com:Baglecake/emile-mini.git
 cd emile-mini
-pip install -e .
+python -m pip install -e .
 </code></pre>
 
 <h4>Exact version (this release)</h4>
-<pre><code>git fetch --tags
+<pre><code class="language-bash">git fetch --tags
 git checkout v0.2.0
-pip install -e .
+python -m pip install -e .
 </code></pre>
 
 <h4>Shallow clone of just this tag (faster)</h4>
-<pre><code>git clone --depth 1 --branch v0.2.0 https://github.com/Baglecake/emile-mini.git
+<pre><code class="language-bash">git clone --depth 1 --branch v0.2.0 https://github.com/Baglecake/emile-mini.git
 cd emile-mini
-pip install -e .
+python -m pip install -e .
 </code></pre>
 
-<h4>Colab quickstart</h4>
-<pre><code>!git clone -q https://github.com/Baglecake/emile-mini.git
+---
+
+### Optional: PPO baseline dependencies
+
+<h4>Install PPO extras</h4>
+<pre><code class="language-bash">python -m pip install "gymnasium&gt;=0.28" stable-baselines3
+</code></pre>
+
+*(If you use CUDA, install the appropriate PyTorch build first, then SB3.)*
+
+---
+
+### Colab 
+
+<h4>Clone + install</h4>
+<pre><code class="language-bash">!git clone -q https://github.com/Baglecake/emile-mini.git
 %cd emile-mini
-!pip install -e .
+!python -m pip install -e .
+</code></pre>
+
+<h4>With PPO baseline</h4>
+<pre><code class="language-bash">!python -m pip install "gymnasium&gt;=0.28" stable-baselines3
 </code></pre>
 
 
