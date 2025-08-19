@@ -1,4 +1,4 @@
-# émile-Mini: a lite Enactive Learner  
+# émile-Mini: *a lite enactive learner*    
 v0.2.0
 
 [![Python 3.8+](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
