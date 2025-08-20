@@ -153,7 +153,7 @@ emile-mini nav-report      # Systematic evaluation across conditions
 
 ---
 
-## 🔬 Research Validation Results
+## 🔬 Research Insights
 
 ### Bidirectional QSE ↔ Cognitive Coupling
 
@@ -173,7 +173,7 @@ emile-mini nav-report      # Systematic evaluation across conditions
 - **QSE States ↔ Context Switching**: r=0.372
 
 ### Scientific Significance
-This validates the **Strong Life-Mind Continuity Thesis** computationally: the same autopoietic dynamics that maintain biological viability also generate emergent cognitive phenomena. The cognitive architecture enriches QSE dynamics by 24%, demonstrating genuine emergence from bidirectional coupling.
+emile-Mini presents compelling computational evidence for the **Strong Life-Mind Continuity Thesis**: the same autopoietic dynamics that maintain biological viability also generate emergent cognitive phenomena. The cognitive architecture enriches QSE dynamics by 24%, demonstrating genuine emergence from bidirectional coupling.
 
 ---
 
