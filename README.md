@@ -1,13 +1,13 @@
-# émile-Mini: *a lite enactive learner*  --v0.3.0
+# émile-Mini: *a lite enactive learner* 
+> v0.3.0
 
 [![Python 3.8+](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![University of Toronto](https://img.shields.io/badge/University%20of-Toronto-003F7F.svg)](https://www.utoronto.ca/)
 [![Research](https://img.shields.io/badge/Type-Research-brightgreen.svg)](https://github.com)
- 
-**émile-Mini** is a lightweight implementation of **enactive cognition** through computational autopoiesis. It demonstrates how intelligent behavior emerges from bidirectional quantum-symbolic coupling, featuring validated emergent regime dynamics and autonomous context switching.
 
-# v0.3.0 — Real QSE, Real Nav
+# v0.3.0 — Real QSE, Real Nav  
+**émile-Mini** is a lightweight implementation of **enactive cognition** through computational autopoiesis. It demonstrates how intelligent behavior emerges from bidirectional *quantum-symbolic coupling*, featuring validated emergent regime dynamics and autonomous context switching.
 
 **TL;DR**: Validated bidirectional QSE ↔ cognition + embodied nav.
 - 7/7 autopoiesis gates ✅ (score ≈ 0.9998)
@@ -30,7 +30,7 @@ pip install -U "git+https://github.com/Baglecake/emile-mini.git#egg=emile-mini"
 
 **émile-Mini implements Strong Life-Mind Continuity** through computational autopoiesis, where cognition emerges from the same self-organizing dynamics that characterize living systems.
 
-> *"The basic concepts needed to understand the organization of life—self-organization, collective dynamics, circular causal processes, autopoiesis—turn out to be central to a proper scientific understanding of mind"* — Andy Clark
+> *"A prerequisite for mind is life, just like life mind can only emerge out of certain organisational structures, therefore life and mind are conceived as continuous. Accordingly the difference between mind and life is essentially one of degree and not in kind"* — Paulo De Jesus
 
 ### Beyond Dead Abstract Computation
 
@@ -45,7 +45,7 @@ pip install -U "git+https://github.com/Baglecake/emile-mini.git#egg=emile-mini"
 
 > *"minds have to be studied in the broader context of living systems and not merely as dead abstract computational processes"*
 
-This positions émile-Mini as **empirical semiotics**—studying how meaning emerges from living-like processes rather than symbolic manipulation. The system demonstrates:
+**empirical semiotics**—studying how meaning emerges from living-like processes rather than symbolic manipulation. The system demonstrates:
 
 **Phenomenological Continuity**: Going beyond behaviorist approaches toward phenomenologically informed embodiment where experience shapes cognitive dynamics.
 
@@ -58,6 +58,86 @@ This positions émile-Mini as **empirical semiotics**—studying how meaning eme
 ## 🌱 What is enactive cognition?
 
 Enactivism frames cognition as **meaning-making through reciprocal environment-agent interaction**. Rather than building fixed internal representations, agents develop skills and interpret significance via sensorimotor engagement and context-dependent adaptation.
+
+### Architecture Overview
+
+```mermaid
+flowchart TB
+  %% ===== ENACTIVE CORE =====
+  subgraph EC[ENACTIVE CORE]
+    Env[Environment]
+    Perc[Perception]
+    Agent[Agent]
+    Act[Action]
+    Feed[Feedback]
+    Emb[Embodied State<br/>(Energy, Position, Movement)]
+    Tau[Emergent Time (τ)]
+    Sigma[Symbolic Curvature (σ)]
+
+    Env <--> Agent
+    Env --> Perc --> Agent
+    Agent --> Act --> Feed --> Env
+    Agent --> Emb --> Tau --> Sigma
+  end
+
+  %% ===== QSE ENGINE =====
+  subgraph QSEBLOCK[QSE ENGINE]
+    CoreQSE[(QSE Core)]
+    Coupling[Quantum–Symbolic Coupling]
+    S[Surplus (S)]
+    Rupt[Rupture Events]
+    Gates[Autopoiesis Gates<br/>(Boundary Integrity, Viability)]
+    CoreQSE --> Coupling
+    Coupling <--> S
+    Coupling <--> Rupt
+    S <--> Rupt
+    Rupt --> Gates
+  end
+
+  Sigma --> CoreQSE
+
+  %% ===== SOCIAL LAYER =====
+  subgraph SOCIAL[SOCIAL LAYER]
+    Teach[Teaching]
+    Learn[Learning]
+    Help[Help-Seeking]
+    Trust[Trust & Novelty Checks]
+    Converge[Knowledge Convergence]
+    Teach <--> Learn <--> Help
+    Learn --> Trust --> Converge
+  end
+
+  Gates --> Learn
+  Gates --> Trust
+
+  %% ===== VALIDATION SUITE =====
+  subgraph VAL[VALIDATION SUITE]
+    Batt[Cognitive Battery]
+    RL[RL Comparison]
+    Score[Autopoiesis Score]
+    Emergence[Emergence vs Reduction]
+    Batt <--> RL
+    Score <--> Emergence
+  end
+
+  Converge --> Batt
+  Converge --> Score
+
+  %% ===== THEORETICAL GROUNDING =====
+  subgraph TG[THEORETICAL GROUNDING]
+    Enact[Enactivism]
+    Second[Second-Order Cybernetics]
+    Luhmann[Luhmann's Social Systems]
+    Fourth[Fourth-Order Cybernetics]
+    Enact <--> Second
+    Luhmann <--> Fourth
+  end
+
+  TG -.-> EC
+  TG -.-> QSEBLOCK
+  TG -.-> SOCIAL
+  TG -.-> VAL
+```
 
 In **émile-Mini** this manifests as:
 
@@ -377,7 +457,9 @@ emile_mini/
 ---
 
 ## 🧪 Research Framework
-
+```
+This repository provides émile-mini v0.3.0, a computational-autopoietic architecture that couples a quantum surplus emergence (QSE) field to symbolic decision dynamics and embodied navigation. A three-stage validator—QSE core → agent coupling (cognitive + embodied) → pattern analysis—quantifies emergence and bidirectional influence. Measurements indicate: 7/7 autopoiesis gates pass with an overall score ≈ 0.9998; coupling a cognitive agent to the QSE core increases regime transitions by ~24% (≈23.29% → ≈28.84%); and bidirectional coupling is detectable in correlations such as QSE-influence ↔ goal changes (r≈0.87) and phasic rupture ↔ learning updates (r≈0.44). A memory-cued navigation agent demonstrates robust embodied behavior under the same framework. These results support an enactive, fourth-order cybernetics interpretation in which cognition arises from recursive regulation and context-sensitive interaction rather than static representation.
+```
 ### Theoretical Contributions
 
 **Strong Life-Mind Continuity**: Computational validation that the same autopoietic principles generating biological viability also produce cognitive emergence.
