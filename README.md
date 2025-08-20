@@ -6,7 +6,7 @@
 [![Research](https://img.shields.io/badge/Type-Research-brightgreen.svg)](https://github.com)
 
 # v0.3.0 — Real QSE, Real Nav  
-**émile-Mini** is a lightweight instantiation of **enactive cognition** through computational autopoiesis. Moving beyond popular frameworks of *Artificial Intelligence* (AI) and *Machine Learning (ML)*, this project implements bidirectional *quantum-symbolic coupling* between agent and environment to demonstrate how intelligent behavior emerges through contextual enaction. Drawing on *enactivist* theories of *life-mind* and a novel articulation of *quantum semiotics*, émile-Mini presents a metaphysics of cognition beyond anthropomorphism that engages a *sociology of being-itself* to demonstrate the co-constitutive nature of *life* and *mind*.
+**émile-Mini** is a lightweight instantiation of **enactive cognition** through computational autopoiesis. Moving beyond popular frameworks of *Artificial Intelligence* (AI) and *Machine Learning (ML)*, this project implements bidirectional *quantum-symbolic coupling* between agent and environment to demonstrate how intelligent behavior emerges through contextual enaction. Drawing on *enactivist* theories of *life-mind* and a novel articulation of *quantum semiotics*, émile-Mini presents a metaphysics of cognition beyond anthropomorphism that engages a *sociology of being-itself* to demonstrate the co-constitution of *life* and *mind*.
 
 **TL;DR**: Validated bidirectionality ↔ cognition + embodied navigation.
 - 7/7 autopoiesis gates ✅ (score ≈ 0.9998)
