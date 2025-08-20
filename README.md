@@ -69,78 +69,46 @@ In **émile-Mini** this manifests as:
 
 ### Architecture Overview
 
-%%{ init: { "flowchart": { "htmlLabels": true } } }%%
 flowchart TD
-    %% -------------------
-    %% --- Subgraphs -----
-    %% -------------------
-    subgraph TG[🧠 THEORETICAL GROUNDING]
-        direction LR
-        Enact[Enactivism]
-        Cybernetics["Second & Fourth-Order<br/>Cybernetics"]
-        Luhmann["Social Systems<br/>(Luhmann)"]
+    subgraph A[THEORETICAL GROUNDING]
+        A1[Enactivism]
+        A2[Cybernetics]
+        A3[Social Systems Theory]
     end
 
-    subgraph QSE[⚙️ QSE ENGINE]
-        direction LR
-        S[Surplus Field (S)] -- informs --> Sigma
-        Sigma[Symbolic Curvature (σ)] -- drives --> CoreQSE
-        CoreQSE[(QSE Core)] -- feeds --> Ruptures
-        Ruptures{Rupture Events} -- checked by --> Gates
-        Gates[Autopoiesis Gates]
+    subgraph B[QSE ENGINE]
+        B1[Surplus Field] --> B2[Symbolic Curvature]
+        B2 --> B3[QSE Core]
+        B3 --> B4[Rupture Events]
+        B4 --> B5[Autopoiesis Gates]
     end
 
-    subgraph EC[🏃 ENACTIVE CORE]
-        direction TD
-        Agent -- interacts with --> Env
-        subgraph InteractionLoop
-            direction LR
-            Env[Environment] --> Perception
-            Perception -- informs --> Agent
-            Agent -- performs --> Action
-            Action -- provides --> Feedback
-            Feedback --> Env
-        end
-        Agent -- has --> EmbodiedState["Embodied State<br/>(Energy, Position)"]
+    subgraph C[ENACTIVE CORE]
+        C1[Agent] -- interacts with --> C2[Environment]
+        C2 --> C3[Perception] --> C1
+        C1 --> C4[Action] --> C5[Feedback] --> C2
+        C1 -- has --> C6[Embodied State]
     end
     
-    subgraph SL[🤝 SOCIAL LAYER]
-        direction TD
-        Teaching & Learning <--> HelpSeeking["Help-Seeking"]
-        Teaching & Learning -- filtered by --> Trust["Trust & Novelty"]
-        Trust -- leads to --> Convergence[Knowledge Convergence]
+    subgraph D[SOCIAL LAYER]
+        D1[Teaching & Learning] <--> D2[Help-Seeking]
+        D1 -- filtered by --> D3[Trust & Novelty]
+        D3 -- leads to --> D4[Knowledge Convergence]
     end
 
-    subgraph VAL[📊 VALIDATION SUITE]
-        direction LR
-        CognitiveBattery["Cognitive Battery"]
-        RLComparison["RL Comparison"]
-        AutopoiesisScore["Autopoiesis Score"]
+    subgraph E[VALIDATION SUITE]
+        E1[Cognitive Battery]
+        E2[RL Comparison]
+        E3[Autopoiesis Score]
     end
 
-    %% -------------------
-    %% --- Connections ---
-    %% -------------------
-    TG -.-> QSE & EC & SL
-    QSE -- powers --> EC
-    Gates -- enables --> SL
-    EC -- generates data for --> VAL
-    SL -- generates data for --> VAL
-
-    %% -------------------
-    %% ----- Styling -----
-    %% -------------------
-    classDef theory fill:#f9f,stroke:#333,stroke-width:2px;
-    classDef engine fill:#bbf,stroke:#333,stroke-width:2px;
-    classDef core fill:#bdf,stroke:#333,stroke-width:2px;
-    classDef social fill:#fb9,stroke:#333,stroke-width:2px;
-    classDef validation fill:#9f9,stroke:#333,stroke-width:2px;
-
-    class TG theory;
-    class QSE engine;
-    class EC core;
-    class SL social;
-    class VAL validation;
+    A -.-> B
+    A -.-> C
+    A -.-> D
+    B -- powers --> C
+    B5 -- enables --> D
+    C -- generates data for --> E
+    D -- generates data for --> E
 
 ---
 
