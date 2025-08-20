@@ -69,7 +69,7 @@ In **émile-Mini** this manifests as:
 
 ### Architecture Overview
 
-
+```
 +-------------------------------------------------------------+
 |                         ENACTIVE CORE                       |
 |                                                             |
@@ -123,7 +123,7 @@ In **émile-Mini** this manifests as:
 |                          |                                   |
 |   [Luhmann's Social Systems] <--> [Fourth-Order Cybernetics] |
 +-------------------------------------------------------------+
-
+```
     
 ---
 
