@@ -196,15 +196,6 @@ Performance advantage holds across obstacle densities (0.1-0.3) and target quadr
 | C1 (Context) | Multi-phase adaptation | 41.76 ± 11.78 reward |
 | C2 (Memory) | Cue-guided navigation | 7.2 ± 5.1 steps to target |
 
-### Autopoiesis Validation
-| Component | Score | Assessment |
-|-----------|-------|------------|
-| Self-Organization | 1.0 | MODERATE structured dynamics |
-| Viability Maintenance | 0.999 | EXCELLENT boundary integrity |
-| Productive Instability | 1.0 | EXCELLENT tonic/phasic balance |
-| Boundary Integrity | 1.0 | EXCEPTIONAL violation resistance |
-| Temporal Autonomy | 1.0 | STRONG emergent time control |
-
 ---
 
 ## 📦 Installation
