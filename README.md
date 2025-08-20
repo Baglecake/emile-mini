@@ -70,59 +70,42 @@ In **émile-Mini** this manifests as:
 ### Architecture Overview
 
 ```
-+-------------------------------------------------------------+
-|                         ENACTIVE CORE                       |
-|                                                             |
-|   [Environment] <----> [Agent] ----> [Action]               |
-|        ^                  |               |                  |
-|        |                  |               |                  |
-|       [Perception]       |              [Feedback]          |
-|                          |                                   |
-|                    [Embodied State]                          |
-|                     (Energy, Position, Movement)             |
-|                          |                                   |
-|                      [Emergent Time (τ)]                     |
-|                          |                                   |
-|                      [Symbolic Curvature (σ)]                |
-|                          |                                   |
-|                       +------------------+                   |
-|                       |     QSE ENGINE   |                   |
-|                       +------------------+                   |
-|                          |                                   |
-|          [Quantum-Symbolic Coupling]                         |
-|                          |                                   |
-|         [Surplus (S)] <--> [Rupture Events]                  |
-|                          |                                   |
-|                    [Autopoiesis Gates]                       |
-|                     (Boundary Integrity, Viability)          |
-|                          |                                   |
-|                       +------------------+                   |
-|                       |    SOCIAL LAYER  |                   |
-|                       +------------------+                   |
-|                          |                                   |
-|           [Teaching] <--> [Learning] <--> [Help-Seeking]     |
-|                          |                                   |
-|                 [Trust & Novelty Checks]                     |
-|                          |                                   |
-|                [Knowledge Convergence]                       |
-|                          |                                   |
-|                       +------------------+                   |
-|                       |  VALIDATION SUITE|                   |
-|                       +------------------+                   |
-|                          |                                   |
-|      [Cognitive Battery] <--> [RL Comparison]                |
-|                          |                                   |
-|       [Autopoiesis Score] <--> [Emergence vs Reduction]      |
-|                          |                                   |
-|                       +------------------+                   |
-|                       |   THEORETICAL    |                   |
-|                       |     GROUNDING    |                   |
-|                       +------------------+                   |
-|                          |                                   |
-|            [Enactivism] <--> [Second-Order Cybernetics]      |
-|                          |                                   |
-|   [Luhmann's Social Systems] <--> [Fourth-Order Cybernetics] |
-+-------------------------------------------------------------+
+
+
+                  +---------------------------------+
+                  |   🧠 THEORETICAL GROUNDING      |
+                  |---------------------------------|
+                  | - Enactivism                    |
+                  | - 2nd & 4th Order Cybernetics   |
+                  | - Social Systems Theory         |
+                  +---------------------------------+
+                             | | |
+          -------------------- | --------------------
+          |                    |                    |
+          v                    v                    v
++------------------+   +------------------+   +------------------+
+|   ⚙️ QSE ENGINE    |   |   🏃 ENACTIVE CORE |   |   🤝 SOCIAL LAYER  |
+|------------------|   |------------------|   |------------------|
+| - Surplus (S)    |   | - Agent          |   | - Teaching       |
+| - Curvature (σ)  |   | - Environment    |   | - Learning       |
+| - Rupture Events |   | - Perception     |   | - Help-Seeking   |
+| - Autopoiesis    |   | - Action         |   | - Trust & Novelty|
+|   Gates          |   | - Embodied State |   | - Convergence    |
++------------------+   +------------------+   +------------------+
+          |                    |                    |
+          | powers             | generates data for |
+          |------------------> |                    |
+                               |------------------> |
+                                                    v
+                                          +---------------------+
+                                          | 📊 VALIDATION SUITE |
+                                          |---------------------|
+                                          | - Cognitive Battery |
+                                          | - RL Comparison     |
+                                          | - Autopoiesis Score |
+                                          +---------------------+
+
+
 ```
     
 ---
