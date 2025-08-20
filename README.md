@@ -71,7 +71,8 @@ In **émile-Mini** this manifests as:
 
 
 flowchart TD
-    subgraph A[THEORETICAL GROUNDING]
+    subgraph 
+    A[THEORETICAL GROUNDING]
         A1[Enactivism]
         A2[Cybernetics]
         A3[Social Systems Theory]
