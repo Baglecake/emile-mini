@@ -58,9 +58,17 @@ pip install -U "git+https://github.com/Baglecake/emile-mini.git#egg=emile-mini"
 
 Enactivism frames cognition as **meaning-making through reciprocal environment-agent interaction**. Rather than building fixed internal representations, agents develop skills and interpret significance via sensorimotor engagement and context-dependent adaptation.
 
+In **émile-Mini** this manifests as:
+
+* **Learning through doing** (experience changes behavior)
+* **Context sensitivity** (same stimulus, different meaning by history)
+* **Embodied experience** (energy, proximity, movement matter)
+* **Emergent goals/strategies** (not hard-coded rules)
+* **Endogenous context switching** (autonomous reframing of situations)
+* **Bidirectional causation** (QSE dynamics ↔ symbolic reasoning)
+
 ### Architecture Overview
 
-```mermaid
 flowchart TB
   %% ===== ENACTIVE CORE =====
   subgraph EC[ENACTIVE CORE]
@@ -136,16 +144,6 @@ flowchart TB
   TG -.-> QSEBLOCK
   TG -.-> SOCIAL
   TG -.-> VAL
-```
-
-In **émile-Mini** this manifests as:
-
-* **Learning through doing** (experience changes behavior)
-* **Context sensitivity** (same stimulus, different meaning by history)
-* **Embodied experience** (energy, proximity, movement matter)
-* **Emergent goals/strategies** (not hard-coded rules)
-* **Endogenous context switching** (autonomous reframing of situations)
-* **Bidirectional causation** (QSE dynamics ↔ symbolic reasoning)
 
 ---
 
