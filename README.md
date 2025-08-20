@@ -69,7 +69,8 @@ In **émile-Mini** this manifests as:
 
 ### Architecture Overview
 
-flowchart TD
+
+```flowchart TD
     subgraph A[THEORETICAL GROUNDING]
         A1[Enactivism]
         A2[Cybernetics]
@@ -109,7 +110,7 @@ flowchart TD
     B5 -- enables --> D
     C -- generates data for --> E
     D -- generates data for --> E
-
+```
 ---
 
 ## ✨ Key Features (v0.3.0)
