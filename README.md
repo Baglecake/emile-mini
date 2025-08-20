@@ -35,6 +35,8 @@ pip install -U "git+https://github.com/Baglecake/emile-mini.git#egg=emile-mini"
 
 **Rather than treating minds as "dead abstract computational processes,"** émile-Mini demonstrates how **meaning-making emerges from embodied, autopoietic dynamics**:
 
+> *"minds have to be studied in the broader context of living systems and not merely as dead abstract computational processes"*
+
 - **QSE Engine**: Computational autopoiesis with boundary maintenance and productive instability
 - **Phenomenologically Informed**: Symbolic curvature triggers endogenous context switching based on lived experience  
 - **Intrinsic Teleology**: Goal formation emerges from surplus dynamics, not external programming
@@ -42,15 +44,13 @@ pip install -U "git+https://github.com/Baglecake/emile-mini.git#egg=emile-mini"
 
 ### Empirical Semiotics in Action
 
-> *"minds have to be studied in the broader context of living systems and not merely as dead abstract computational processes"*
-
 **empirical semiotics**—studying how meaning emerges from living-like processes rather than symbolic manipulation. The system demonstrates:
 
 **Phenomenological Continuity**: Going beyond behaviorist approaches toward phenomenologically informed embodiment where experience shapes cognitive dynamics.
 
-**Intrinsic Teleology**: Purpose emerges from autopoietic organization rather than external goal specification, securing genuine cognition and sense-making.
+**Intrinsic Teleology**: Purpose emerges from autopoietic organization rather than external goal specification, securing genuine cognition and sense-making in an ontology of self perpetuation.
 
-**Strong Life-Mind Continuity Thesis (SLMCT+)**: The difference between mind and life is one of degree, not kind—validated through computational autopoiesis with measurable emergent properties.
+**Strong Life-Mind Continuity Thesis (SLMCT+)**: The SLMCT underpins this work as an *ethic* of cognition itself, where "the self-organizing features of mind are an enriched version of the self-organizing features of life.” (Thompson, 2007). Embracing the bidirectionality of this ethic, the émile project extends the SLMCT toward an understanding of living systems as constitutive conditions for cognition, with the cognitive a necessary and reciprocal quality for the emergence and persistance of life. Insofar as a _being-in-itself_ is a _being-in-the-world_, "the difference between mind and life is essentially one of degree and not in kind.” (De Jesus, 2015). Such is the *intrinsic teleology*, an existential dialogue through which emerges a _sociology of being-itself_ where _being_ is enacted through the context of its emergence, and context, in turn, is qualified in the distinction of its _being_.
 
 ---
 
