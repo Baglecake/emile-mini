@@ -1,7 +1,14 @@
+# build & metadata
+dist/
+build/
+*.egg-info/
+**/__pycache__/
+.pytest_cache/
+.ruff_cache/
+.ipynb_checkpoints/
+
+# analysis outputs
 real_qse_validation/
 *.jsonl
 *_episodes.csv
 *_summary.json
-**/__pycache__/
-.pytest_cache/
-.ruff_cache/
