@@ -70,7 +70,7 @@ In **émile-Mini** this manifests as:
 ### Architecture Overview
 
 
-```flowchart TD
+flowchart TD
     subgraph A[THEORETICAL GROUNDING]
         A1[Enactivism]
         A2[Cybernetics]
@@ -92,8 +92,8 @@ In **émile-Mini** this manifests as:
     end
     
     subgraph D[SOCIAL LAYER]
-        D1[Teaching & Learning] <--> D2[Help-Seeking]
-        D1 -- filtered by --> D3[Trust & Novelty]
+        D1[Teaching and Learning] <--> D2[Help-Seeking]
+        D1 -- filtered by --> D3[Trust and Novelty]
         D3 -- leads to --> D4[Knowledge Convergence]
     end
 
@@ -110,7 +110,7 @@ In **émile-Mini** this manifests as:
     B5 -- enables --> D
     C -- generates data for --> E
     D -- generates data for --> E
-```
+    
 ---
 
 ## ✨ Key Features (v0.3.0)
