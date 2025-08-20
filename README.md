@@ -7,7 +7,7 @@
 
 **émile-Mini** is a lightweight instantiation of **enactive cognition** through computational autopoiesis. Moving beyond popular frameworks of *Artificial Intelligence* (AI) and *Machine Learning (ML)*, this project implements bidirectional *quantum-symbolic coupling* between agent and environment to demonstrate how intelligent behavior emerges through contextual enaction. Drawing on theories of *autopoietic enactivism*, a novel articulation of *quantum semiotics*, and the *orders of cybernetics*, émile-Mini presents a metaphysics of cognition beyond anthropomorphism that engages a *sociology of being-itself* to demonstrate the co-constitution of *life* and *mind*.
 
-## v0.3.0 — (S.E.E.) Social, Embodied, and Enactive Cognition
+## v0.3.0 — (S.E.E.) Social, Embodied, and Enactive  
 **TL;DR**: Validated bidirectionality ↔ cognition + embodied navigation.
 - 7/7 autopoiesis gates ✅ (score ≈ 0.9998)
 - Regime switching +~24% when coupled (≈23.29% → ≈28.84%)
