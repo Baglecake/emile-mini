@@ -6,7 +6,7 @@
 [![Research](https://img.shields.io/badge/Type-Research-brightgreen.svg)](https://github.com)
 
 # v0.3.0 — Real QSE, Real Nav  
-**émile-Mini** is a lightweight implementation of **enactive cognition** through computational autopoiesis. It demonstrates how intelligent behavior emerges from bidirectional *quantum-symbolic coupling*, featuring validated emergent regime dynamics and autonomous context switching.
+**émile-Mini** is a lightweight implementation of **enactive cognition** through computational autopoiesis. It demonstrates how intelligent behavior emerges from bidirectional *quantum-symbolic coupling*, validated through observed emergent regime dynamics and autonomous context switching.
 
 **TL;DR**: Validated bidirectional QSE ↔ cognition + embodied nav.
 - 7/7 autopoiesis gates ✅ (score ≈ 0.9998)
@@ -29,13 +29,11 @@ pip install -U "git+https://github.com/Baglecake/emile-mini.git#egg=emile-mini"
 
 **émile-Mini implements Strong Life-Mind Continuity** through computational autopoiesis, where cognition emerges from the same self-organizing dynamics that characterize living systems.
 
-> *"A prerequisite for mind is life, just like life mind can only emerge out of certain organisational structures, therefore life and mind are conceived as continuous. Accordingly the difference between mind and life is essentially one of degree and not in kind"* — Paulo De Jesus
-
+> *"A prerequisite for mind is life, just like life mind can only emerge out of certain organisational structures, therefore life and mind are conceived as continuous... Minds have to be studied in the broader context of living systems and not merely as dead abstract computational processes"* (De Jesus, 2015)
+  
 ### Beyond Dead Abstract Computation
 
-**Rather than treating minds as "dead abstract computational processes,"** émile-Mini demonstrates how **meaning-making emerges from embodied, autopoietic dynamics**:
-
-> *"minds have to be studied in the broader context of living systems and not merely as dead abstract computational processes"*
+**From abstract to tangible** - émile-Mini *embodies* how **meaning-making emerges through autopoietic dynamics**:
 
 - **QSE Engine**: Computational autopoiesis with boundary maintenance and productive instability
 - **Phenomenologically Informed**: Symbolic curvature triggers endogenous context switching based on lived experience  
@@ -46,9 +44,9 @@ pip install -U "git+https://github.com/Baglecake/emile-mini.git#egg=emile-mini"
 
 **empirical semiotics**—studying how meaning emerges from living-like processes rather than symbolic manipulation. The system demonstrates:
 
-**Phenomenological Continuity**: Going beyond behaviorist approaches toward phenomenologically informed embodiment where experience shapes cognitive dynamics.
+**Phenomenological Continuity**: Going beyond behaviorist approaches toward phenomenologically informed embodiment where experience gives form to cognition.
 
-**Intrinsic Teleology**: Purpose emerges from autopoietic organization rather than external goal specification, securing genuine cognition and sense-making in an ontology of self perpetuation.
+**Intrinsic Teleology**: Purpose emerges from autopoietic organization rather than external goal specification, securing genuine cognition and sense-making as ontological components of internal coherence.
 
 **Strong Life-Mind Continuity Thesis (SLMCT+)**: The SLMCT underpins this work as an *ethic* of cognition itself, where "the self-organizing features of mind are an enriched version of the self-organizing features of life.” (Thompson, 2007). Embracing the bidirectionality of this ethic, the émile project extends the SLMCT toward an understanding of living systems as constitutive conditions for cognition, with the cognitive a necessary and reciprocal quality for the emergence and persistance of life. Insofar as a _being-in-itself_ is a _being-in-the-world_, "the difference between mind and life is essentially one of degree and not in kind.” (De Jesus, 2015). Such is the *intrinsic teleology*, an existential dialogue through which emerges a _sociology of being-itself_ where _being_ is enacted through the context of its emergence, and context, in turn, is qualified in the distinction of its _being_.
 
