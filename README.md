@@ -5,8 +5,8 @@
 [![University of Toronto](https://img.shields.io/badge/University%20of-Toronto-003F7F.svg)](https://www.utoronto.ca/)
 [![Research](https://img.shields.io/badge/Type-Research-brightgreen.svg)](https://github.com)
 
-# v0.3.0 — Real QSE, Real Nav  
-**émile-Mini** is a lightweight instantiation of **enactive cognition** through computational autopoiesis. Moving beyond popular frameworks of *Artificial Intelligence* (AI) and *Machine Learning (ML)*, this project implements bidirectional *quantum-symbolic coupling* between agent and environment to demonstrate how intelligent behavior emerges through contextual enaction. Drawing on theories of *enactivism*, a novel articulation of *quantum semiotics*, and the *orders of cybernetics*, émile-Mini presents a metaphysics of cognition beyond anthropomorphism that engages a *sociology of being-itself* to demonstrate the co-constitution of *life* and *mind*.
+# v0.3.0 — Real Emergence, Real Embodiment 
+**émile-Mini** is a lightweight instantiation of **enactive cognition** through computational autopoiesis. Moving beyond popular frameworks of *Artificial Intelligence* (AI) and *Machine Learning (ML)*, this project implements bidirectional *quantum-symbolic coupling* between agent and environment to demonstrate how intelligent behavior emerges through contextual enaction. Drawing on theories of *autopoietic enactivism*, a novel articulation of *quantum semiotics*, and the *orders of cybernetics*, émile-Mini presents a metaphysics of cognition beyond anthropomorphism that engages a *sociology of being-itself* to demonstrate the co-constitution of *life* and *mind*.
 
 **TL;DR**: Validated bidirectionality ↔ cognition + embodied navigation.
 - 7/7 autopoiesis gates ✅ (score ≈ 0.9998)
