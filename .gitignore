@@ -1,51 +1,7 @@
-# Colab / Google Drive mounts
-drive/
-.config/
-
-# Python junk
-__pycache__/
-*.py[cod]
-*.egg-info/
-dist/
-build/
-
-# Notebooks & OS noise
-.ipynb_checkpoints/
-*.ipynb
-.DS_Store
-
-# Generated artifacts
-*.png
-*.jpg
-*.pdf
-# Model/checkpoint artifacts
-*.zip
-*.pt
-*.pth
-*.ckpt
-*.onnx
-*.npz
-*.npy
-wandb/
-runs/
-
-# OS/editor cruft
-.DS_Store
-__pycache__/
-.ipynb_checkpoints/
-
-# artifacts & caches
-*.zip
-*.pt
-*.pth
-*.ckpt
-*.onnx
-*.npz
-*.npy
-wandb/
-runs/
-dist/
-build/
-*.egg-info/
+real_qse_validation/
+*.jsonl
+*_episodes.csv
+*_summary.json
+**/__pycache__/
 .pytest_cache/
-.ipynb_checkpoints/
+.ruff_cache/
