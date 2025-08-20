@@ -1,5 +1,5 @@
 # émile-Mini 
-_a lite enactive learner_ 
+> _lite enactive learner v0.3.0_ 
 
 [![Python 3.8+](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
