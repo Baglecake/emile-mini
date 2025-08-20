@@ -12,7 +12,7 @@
 - 7/7 autopoiesis gates ✅ (score ≈ 0.9998)
 - Regime switching +~24% when coupled (≈23.29% → ≈28.84%)
 - r≈0.87 (Quantum influence ↔ goal changes), r≈0.44 (phasic rupture ↔ learning)
-
+----
 ## Install
 ```bash
 pip install -U "git+https://github.com/Baglecake/emile-mini.git#egg=emile-mini"
