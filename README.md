@@ -70,41 +70,60 @@ In **émile-Mini** this manifests as:
 ### Architecture Overview
 
 
-flowchart TD
-    subgraph A[THEORETICAL GROUNDING]
-        A1[Enactivism]
-        A2[Cybernetics]
-        A3[Social Systems Theory]
-    end
-    subgraph B[QSE ENGINE]
-        B1[Surplus Field] --> B2[Symbolic Curvature]
-        B2 --> B3[QSE Core]
-        B3 --> B4[Rupture Events]
-        B4 --> B5[Autopoiesis Gates]
-    end
-    subgraph C[ENACTIVE CORE]
-        C1[Agent] -- interacts with --> C2[Environment]
-        C2 --> C3[Perception] --> C1
-        C1 --> C4[Action] --> C5[Feedback] --> C2
-        C1 -- has --> C6[Embodied State]
-    end
-    subgraph D[SOCIAL LAYER]
-        D1[Teaching and Learning] <--> D2[Help-Seeking]
-        D1 -- filtered by --> D3[Trust and Novelty]
-        D3 -- leads to --> D4[Knowledge Convergence]
-    end
-    subgraph E[VALIDATION SUITE]
-        E1[Cognitive Battery]
-        E2[RL Comparison]
-        E3[Autopoiesis Score]
-    end
-    A -.-> B
-    A -.-> C
-    A -.-> D
-    B -- powers --> C
-    B5 -- enables --> D
-    C -- generates data for --> E
-    D -- generates data for --> E
++-------------------------------------------------------------+
+|                         ENACTIVE CORE                       |
+|                                                             |
+|   [Environment] <----> [Agent] ----> [Action]               |
+|        ^                  |               |                  |
+|        |                  |               |                  |
+|       [Perception]       |              [Feedback]          |
+|                          |                                   |
+|                    [Embodied State]                          |
+|                     (Energy, Position, Movement)             |
+|                          |                                   |
+|                      [Emergent Time (τ)]                     |
+|                          |                                   |
+|                      [Symbolic Curvature (σ)]                |
+|                          |                                   |
+|                       +------------------+                   |
+|                       |     QSE ENGINE   |                   |
+|                       +------------------+                   |
+|                          |                                   |
+|          [Quantum-Symbolic Coupling]                         |
+|                          |                                   |
+|         [Surplus (S)] <--> [Rupture Events]                  |
+|                          |                                   |
+|                    [Autopoiesis Gates]                       |
+|                     (Boundary Integrity, Viability)          |
+|                          |                                   |
+|                       +------------------+                   |
+|                       |    SOCIAL LAYER  |                   |
+|                       +------------------+                   |
+|                          |                                   |
+|           [Teaching] <--> [Learning] <--> [Help-Seeking]     |
+|                          |                                   |
+|                 [Trust & Novelty Checks]                     |
+|                          |                                   |
+|                [Knowledge Convergence]                       |
+|                          |                                   |
+|                       +------------------+                   |
+|                       |  VALIDATION SUITE|                   |
+|                       +------------------+                   |
+|                          |                                   |
+|      [Cognitive Battery] <--> [RL Comparison]                |
+|                          |                                   |
+|       [Autopoiesis Score] <--> [Emergence vs Reduction]      |
+|                          |                                   |
+|                       +------------------+                   |
+|                       |   THEORETICAL    |                   |
+|                       |     GROUNDING    |                   |
+|                       +------------------+                   |
+|                          |                                   |
+|            [Enactivism] <--> [Second-Order Cybernetics]      |
+|                          |                                   |
+|   [Luhmann's Social Systems] <--> [Fourth-Order Cybernetics] |
++-------------------------------------------------------------+
+
     
 ---
 
