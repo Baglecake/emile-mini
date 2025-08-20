@@ -1,0 +1,2 @@
+[console_scripts]
+emile-mini = emile_mini.cli:main

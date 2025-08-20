@@ -18,8 +18,8 @@ import time
 from pathlib import Path
 
 # Import existing QSE-Émile modules
-from .agent import EmileAgent
-from .config import QSEConfig
+from emile_mini.agent import EmileAgent
+from emile_mini.config import QSEConfig
 
 @dataclass
 class BodyState:
@@ -122,9 +122,9 @@ class SensoriMotorBody:
         cfg = getattr(self, "cfg", None)
         if cfg is None:
             try:
-                from .config import QSEConfig  # packaged path
+                from emile_mini.config import QSEConfig  # packaged path
             except Exception:
-                from .config import QSEConfig   # script path (fallback)
+                from emile_mini.config import QSEConfig   # script path (fallback)
             cfg = QSEConfig()
 
         # Energy parameters (with safe defaults)
@@ -357,7 +357,7 @@ class EmbodiedEnvironment:
         if action_name == 'forage':
             if self.cell_has_resource(current_pos):
                 if self.consume_resource(current_pos):
-                    from .config import CONFIG
+                    from emile_mini.config import CONFIG
                     forage_min = getattr(CONFIG, 'ENERGY_FORAGE_REWARD_MIN', 0.08)
                     forage_max = getattr(CONFIG, 'ENERGY_FORAGE_REWARD_MAX', 0.16)
                     energy_gain = np.random.uniform(forage_min, forage_max)
@@ -424,6 +424,10 @@ class EmbodiedEnvironment:
         body.update_proprioception()
         sensory_after = self.get_visual_field(body).flatten()
         environment_feedback['sensory_after'] = sensory_after
+
+        # FIX: Add sensory change detection
+        sensory_change_magnitude = np.linalg.norm(sensory_after - sensory_before)
+        environment_feedback['sensory_change'] = sensory_change_magnitude > 0.1  # Threshold for significant change
 
         # Learn affordances
         available_actions = self._get_available_actions(body)
@@ -558,7 +562,16 @@ class EmbodiedQSEAgent(EmileAgent):
             'body_state': self.body.state,
             'context': new_context,
             'context_switched': new_context != old_context,
-            'distinction_level': distinction_level
+            'distinction_level': distinction_level,
+            
+            # ADD THESE REQUIRED FIELDS:
+            'qse_influence': float(distinction_level),  # Non-zero
+            'q_value_change': float(reward),  # Use actual reward
+            'decision_events': 1 if new_context != old_context else 0,
+            'tau_current': float(cognitive_metrics.get('tau_current', 1.0)),
+            'sigma_mean': float(cognitive_metrics.get('sigma_mean', 0.0)),
+            'context_changed': int(new_context != old_context),
+            'goal': str(current_goal),  # Not None!
         }
 
     def _get_perceptual_filter(self, context_id):
@@ -598,12 +611,13 @@ class EmbodiedQSEAgent(EmileAgent):
         import numpy as np
 
         # --- CURIOSITY FIX ---
-        # Prioritize examining any significant object in the immediate vicinity.
+        # Only examine if there's a STRONG visual signal AND we haven't been here recently
         vision_range = self.body.vision_range
         center_vision = visual_field[vision_range, vision_range, :]
-        if np.mean(center_vision) > 0.25:  # Threshold for detecting *something* is here
-            # If standing on a square with a strong visual signal, examine it.
-            return 'examine', 1.0
+        if np.mean(center_vision) > 0.6:  # HIGHER threshold - only examine very obvious objects
+            # Add some randomness to avoid getting stuck
+            if np.random.random() < 0.7:  # 70% chance to examine, 30% to move on
+                return 'examine', 1.0
         # --- END CURIOSITY FIX ---
 
         # ENHANCED ENERGY MANAGEMENT with forage mechanics

@@ -1,13 +1,24 @@
 
+#!/usr/bin/env python3
+"""
+Complete Navigation System - Enhanced QSE Embodied Navigation
+=============================================================
+
+Defines the navigation agent and environment classes only.
+No validator logic - that belongs in separate validation scripts.
+"""
+
 import numpy as np
 from collections import defaultdict
+from typing import Optional, Tuple, Dict, Any
 
-from emile_mini.embodied_qse_emile import EmbodiedQSEAgent, EmbodiedEnvironment
-from emile_mini.config import QSEConfig
+from .embodied_qse_emile import EmbodiedQSEAgent, EmbodiedEnvironment
+from .config import QSEConfig
 
 
 class ClearPathEnvironment(EmbodiedEnvironment):
     """Environment with clear paths for navigation testing."""
+    
     def __init__(self, size=20):
         super().__init__(size)
         self.clear_navigation_paths()
@@ -34,6 +45,7 @@ class ClearPathEnvironment(EmbodiedEnvironment):
                     if 0 <= nx < self.size and 0 <= ny < self.size:
                         self.grid[nx, ny] = 0.0
         print("✅ Navigation paths cleared")
+
 
 class MemoryGuidedGoalModule:
     """Fixed navigation with proper success detection and turn logic."""
@@ -167,6 +179,7 @@ class MemoryGuidedGoalModule:
 
         return best
 
+
 class ProactiveEmbodiedQSEAgent(EmbodiedQSEAgent):
     """Enhanced agent with fixed navigation logic."""
     
@@ -180,7 +193,7 @@ class ProactiveEmbodiedQSEAgent(EmbodiedQSEAgent):
         print(f"🎯 Agent received cue: {cue}")
         print(f"🎯 Target set to: {self.memory_goal.target_position}")
 
-    def embodied_step(self, environment):
+    def embodied_step(self, environment, dt=0.01):
         """Enhanced step with FIXED cue following calculation for better recognition."""
         old_pos = np.array(self.body.state.position, dtype=float)
 
@@ -274,6 +287,7 @@ class ProactiveEmbodiedQSEAgent(EmbodiedQSEAgent):
             'cue_follow_rate': float(cue_follow_rate),
             'action_bias': action_bias
         }
+
 
 def test_complete_navigation():
     """Enhanced test with more realistic success criteria."""
@@ -374,9 +388,6 @@ def test_complete_navigation():
         print(f"\n❌ NEEDS WORK: Navigation not working")
         return False
 
-if __name__ == "__main__":
-    ok = test_complete_navigation()
-    if ok:
-        print("\n🚀 READY FOR PPO COMPETITION!")
-    else:
-        print("\n🔧 More tuning needed")
+
+# Clean exports - exactly what validator expects
+__all__ = ['ProactiveEmbodiedQSEAgent', 'ClearPathEnvironment', 'test_complete_navigation']

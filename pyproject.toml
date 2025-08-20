@@ -21,6 +21,9 @@ Issues = "https://github.com/baglecake/emile-mini/issues"
 
 [project.scripts]
 emile-mini = "emile_mini.cli:main"
+emile-validate = "emile_mini.real_qse_validation_existing_tools:main"
+emile-battery  = "emile_mini.cognitive_battery:main"
+
 
 [tool.setuptools.packages.find]
 include = ["emile_mini*"]
