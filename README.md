@@ -1,13 +1,13 @@
 # émile-Mini: a lite enactive learner
-
+> version 0.3.0  
 [![Python 3.8+](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![University of Toronto](https://img.shields.io/badge/University%20of-Toronto-003F7F.svg)](https://www.utoronto.ca/)
 [![Research](https://img.shields.io/badge/Type-Research-brightgreen.svg)](https://github.com)
 
-## v0.3.0 — Real Emergence, Real Embodiment 
 **émile-Mini** is a lightweight instantiation of **enactive cognition** through computational autopoiesis. Moving beyond popular frameworks of *Artificial Intelligence* (AI) and *Machine Learning (ML)*, this project implements bidirectional *quantum-symbolic coupling* between agent and environment to demonstrate how intelligent behavior emerges through contextual enaction. Drawing on theories of *autopoietic enactivism*, a novel articulation of *quantum semiotics*, and the *orders of cybernetics*, émile-Mini presents a metaphysics of cognition beyond anthropomorphism that engages a *sociology of being-itself* to demonstrate the co-constitution of *life* and *mind*.
 
+## v0.3.0 — (S.E.E.) Social, Embodied, and Enactive Cognition
 **TL;DR**: Validated bidirectionality ↔ cognition + embodied navigation.
 - 7/7 autopoiesis gates ✅ (score ≈ 0.9998)
 - Regime switching +~24% when coupled (≈23.29% → ≈28.84%)
@@ -31,7 +31,8 @@ pip install -U "git+https://github.com/Baglecake/emile-mini.git#egg=emile-mini"
 
 > *"A prerequisite for mind is life, just like life mind can only emerge out of certain organisational structures, therefore life and mind are conceived as continuous... Minds have to be studied in the broader context of living systems and not merely as dead abstract computational processes"* (De Jesus, 2015)
   
-### Beyond Dead Abstract Computation
+### Beyond Abstraction -> Tangible Meaning-Making
+> Moving past assumptions of computational stasis into enactive cognition
 
 **From abstract to tangible** - émile-Mini *embodies* how **meaning-making emerges through autopoietic dynamics**:
 
@@ -40,10 +41,12 @@ pip install -U "git+https://github.com/Baglecake/emile-mini.git#egg=emile-mini"
 - **Intrinsic Teleology**: Goal formation emerges from surplus dynamics, not external programming
 - **Life-Mind Continuity**: Same autopoietic principles generate both biological viability and cognitive emergence
 
-### Empirical Semiotics in Action
+### Empirical Semiotics Enacted
 
-**empirical semiotics**—studying how meaning emerges from living-like processes rather than symbolic manipulation. The system demonstrates:
-
+**empirical semiotics**—Refers to measurable metaphysics of symbolic emergence in intelligent systems that shows how meaning emerges through experiencial–or 'lived'–processes, not symbolic manipulation alone. 
+  
+**The _Intelligent System_ Demonstrates:**
+  
 **Phenomenological Continuity**: Going beyond behaviorist approaches toward phenomenologically informed embodiment where experience gives form to cognition.
 
 **Intrinsic Teleology**: Purpose emerges from autopoietic organization rather than external goal specification, securing genuine cognition and sense-making as ontological components of internal coherence.
