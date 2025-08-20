@@ -1,4 +1,4 @@
-# émile-Mini: *a lite enactive learner* 
+# émile-Mini: _a lite enactive learner_ 
 
 [![Python 3.8+](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
@@ -6,12 +6,12 @@
 [![Research](https://img.shields.io/badge/Type-Research-brightgreen.svg)](https://github.com)
 
 # v0.3.0 — Real QSE, Real Nav  
-**émile-Mini** is a lightweight implementation of **enactive cognition** through computational autopoiesis. It demonstrates how intelligent behavior emerges from bidirectional *quantum-symbolic coupling*, validated through observed emergent regime dynamics and autonomous context switching.
+**émile-Mini** is a lightweight instantiation of **enactive cognition** through computational autopoiesis. Moving beyond popular frameworks of *Artificial Intelligence* (AI) and *Machine Learning (ML)*, this project implements bidirectional *quantum-symbolic coupling* between agent and environment to demonstrate how intelligent behavior emerges through contextual enaction. Drawing on *enactivist* theories of *life-mind* and a novel articulation of *quantum semiotics*, émile-Mini presents a metaphysics of cognition beyond anthropomorphism that engages a *sociology of being-itself* to demonstrate the co-constitutive nature of *life* and *mind*.
 
-**TL;DR**: Validated bidirectional QSE ↔ cognition + embodied nav.
+**TL;DR**: Validated bidirectionality ↔ cognition + embodied navigation.
 - 7/7 autopoiesis gates ✅ (score ≈ 0.9998)
 - Regime switching +~24% when coupled (≈23.29% → ≈28.84%)
-- r≈0.87 (QSE influence ↔ goal changes), r≈0.44 (phasic rupture ↔ learning)
+- r≈0.87 (Quantum influence ↔ goal changes), r≈0.44 (phasic rupture ↔ learning)
 
 ## Install
 ```bash
@@ -27,7 +27,7 @@ pip install -U "git+https://github.com/Baglecake/emile-mini.git#egg=emile-mini"
 
 ## 🧬 Theoretical Foundation
 
-**émile-Mini implements Strong Life-Mind Continuity** through computational autopoiesis, where cognition emerges from the same self-organizing dynamics that characterize living systems.
+**This project embraces the Strong Life-Mind Continuity Thesis (SLMC)** *enacted* through computational autopoiesis, where cognition emerges from the self-organizing dynamics that qualify living systems.
 
 > *"A prerequisite for mind is life, just like life mind can only emerge out of certain organisational structures, therefore life and mind are conceived as continuous... Minds have to be studied in the broader context of living systems and not merely as dead abstract computational processes"* (De Jesus, 2015)
   
