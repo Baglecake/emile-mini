@@ -68,7 +68,7 @@ In **émile-Mini** this manifests as:
 * **Bidirectional causation** (QSE dynamics ↔ symbolic reasoning)
 
 ### Architecture Overview
-
+%%{init: {"flowchart": {"htmlLabels": false}} }%%
 flowchart TB
   %% ===== ENACTIVE CORE =====
   subgraph EC[ENACTIVE CORE]
@@ -77,9 +77,9 @@ flowchart TB
     Agent[Agent]
     Act[Action]
     Feed[Feedback]
-    Emb[Embodied State<br/>(Energy, Position, Movement)]
-    Tau[Emergent Time (τ)]
-    Sigma[Symbolic Curvature (σ)]
+    Emb["Embodied State\n(Energy, Position, Movement)"]
+    Tau["Emergent Time (τ)"]
+    Sigma["Symbolic Curvature (σ)"]
 
     Env <--> Agent
     Env --> Perc --> Agent
@@ -90,10 +90,10 @@ flowchart TB
   %% ===== QSE ENGINE =====
   subgraph QSEBLOCK[QSE ENGINE]
     CoreQSE[(QSE Core)]
-    Coupling[Quantum–Symbolic Coupling]
-    S[Surplus (S)]
-    Rupt[Rupture Events]
-    Gates[Autopoiesis Gates<br/>(Boundary Integrity, Viability)]
+    Coupling["Quantum–Symbolic Coupling"]
+    S["Surplus (S)"]
+    Rupt["Rupture Events"]
+    Gates["Autopoiesis Gates\n(Boundary Integrity, Viability)"]
     CoreQSE --> Coupling
     Coupling <--> S
     Coupling <--> Rupt
@@ -108,8 +108,8 @@ flowchart TB
     Teach[Teaching]
     Learn[Learning]
     Help[Help-Seeking]
-    Trust[Trust & Novelty Checks]
-    Converge[Knowledge Convergence]
+    Trust["Trust & Novelty Checks"]
+    Converge["Knowledge Convergence"]
     Teach <--> Learn <--> Help
     Learn --> Trust --> Converge
   end
@@ -119,10 +119,10 @@ flowchart TB
 
   %% ===== VALIDATION SUITE =====
   subgraph VAL[VALIDATION SUITE]
-    Batt[Cognitive Battery]
-    RL[RL Comparison]
-    Score[Autopoiesis Score]
-    Emergence[Emergence vs Reduction]
+    Batt["Cognitive Battery"]
+    RL["RL Comparison"]
+    Score["Autopoiesis Score"]
+    Emergence["Emergence vs Reduction"]
     Batt <--> RL
     Score <--> Emergence
   end
@@ -133,9 +133,9 @@ flowchart TB
   %% ===== THEORETICAL GROUNDING =====
   subgraph TG[THEORETICAL GROUNDING]
     Enact[Enactivism]
-    Second[Second-Order Cybernetics]
-    Luhmann[Luhmann's Social Systems]
-    Fourth[Fourth-Order Cybernetics]
+    Second["Second-Order Cybernetics"]
+    Luhmann["Luhmann's Social Systems"]
+    Fourth["Fourth-Order Cybernetics"]
     Enact <--> Second
     Luhmann <--> Fourth
   end
@@ -144,6 +144,7 @@ flowchart TB
   TG -.-> QSEBLOCK
   TG -.-> SOCIAL
   TG -.-> VAL
+
 
 ---
 
