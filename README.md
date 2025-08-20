@@ -68,83 +68,79 @@ In **émile-Mini** this manifests as:
 * **Bidirectional causation** (QSE dynamics ↔ symbolic reasoning)
 
 ### Architecture Overview
-%%{init: {"flowchart": {"htmlLabels": false}} }%%
-flowchart TB
-  %% ===== ENACTIVE CORE =====
-  subgraph EC[ENACTIVE CORE]
-    Env[Environment]
-    Perc[Perception]
-    Agent[Agent]
-    Act[Action]
-    Feed[Feedback]
-    Emb["Embodied State\n(Energy, Position, Movement)"]
-    Tau["Emergent Time (τ)"]
-    Sigma["Symbolic Curvature (σ)"]
 
-    Env <--> Agent
-    Env --> Perc --> Agent
-    Agent --> Act --> Feed --> Env
-    Agent --> Emb --> Tau --> Sigma
-  end
+%%{ init: { "flowchart": { "htmlLabels": true } } }%%
+flowchart TD
+    %% -------------------
+    %% --- Subgraphs -----
+    %% -------------------
+    subgraph TG[🧠 THEORETICAL GROUNDING]
+        direction LR
+        Enact[Enactivism]
+        Cybernetics["Second & Fourth-Order<br/>Cybernetics"]
+        Luhmann["Social Systems<br/>(Luhmann)"]
+    end
 
-  %% ===== QSE ENGINE =====
-  subgraph QSEBLOCK[QSE ENGINE]
-    CoreQSE[(QSE Core)]
-    Coupling["Quantum–Symbolic Coupling"]
-    S["Surplus (S)"]
-    Rupt["Rupture Events"]
-    Gates["Autopoiesis Gates\n(Boundary Integrity, Viability)"]
-    CoreQSE --> Coupling
-    Coupling <--> S
-    Coupling <--> Rupt
-    S <--> Rupt
-    Rupt --> Gates
-  end
+    subgraph QSE[⚙️ QSE ENGINE]
+        direction LR
+        S[Surplus Field (S)] -- informs --> Sigma
+        Sigma[Symbolic Curvature (σ)] -- drives --> CoreQSE
+        CoreQSE[(QSE Core)] -- feeds --> Ruptures
+        Ruptures{Rupture Events} -- checked by --> Gates
+        Gates[Autopoiesis Gates]
+    end
 
-  Sigma --> CoreQSE
+    subgraph EC[🏃 ENACTIVE CORE]
+        direction TD
+        Agent -- interacts with --> Env
+        subgraph InteractionLoop
+            direction LR
+            Env[Environment] --> Perception
+            Perception -- informs --> Agent
+            Agent -- performs --> Action
+            Action -- provides --> Feedback
+            Feedback --> Env
+        end
+        Agent -- has --> EmbodiedState["Embodied State<br/>(Energy, Position)"]
+    end
+    
+    subgraph SL[🤝 SOCIAL LAYER]
+        direction TD
+        Teaching & Learning <--> HelpSeeking["Help-Seeking"]
+        Teaching & Learning -- filtered by --> Trust["Trust & Novelty"]
+        Trust -- leads to --> Convergence[Knowledge Convergence]
+    end
 
-  %% ===== SOCIAL LAYER =====
-  subgraph SOCIAL[SOCIAL LAYER]
-    Teach[Teaching]
-    Learn[Learning]
-    Help[Help-Seeking]
-    Trust["Trust & Novelty Checks"]
-    Converge["Knowledge Convergence"]
-    Teach <--> Learn <--> Help
-    Learn --> Trust --> Converge
-  end
+    subgraph VAL[📊 VALIDATION SUITE]
+        direction LR
+        CognitiveBattery["Cognitive Battery"]
+        RLComparison["RL Comparison"]
+        AutopoiesisScore["Autopoiesis Score"]
+    end
 
-  Gates --> Learn
-  Gates --> Trust
+    %% -------------------
+    %% --- Connections ---
+    %% -------------------
+    TG -.-> QSE & EC & SL
+    QSE -- powers --> EC
+    Gates -- enables --> SL
+    EC -- generates data for --> VAL
+    SL -- generates data for --> VAL
 
-  %% ===== VALIDATION SUITE =====
-  subgraph VAL[VALIDATION SUITE]
-    Batt["Cognitive Battery"]
-    RL["RL Comparison"]
-    Score["Autopoiesis Score"]
-    Emergence["Emergence vs Reduction"]
-    Batt <--> RL
-    Score <--> Emergence
-  end
+    %% -------------------
+    %% ----- Styling -----
+    %% -------------------
+    classDef theory fill:#f9f,stroke:#333,stroke-width:2px;
+    classDef engine fill:#bbf,stroke:#333,stroke-width:2px;
+    classDef core fill:#bdf,stroke:#333,stroke-width:2px;
+    classDef social fill:#fb9,stroke:#333,stroke-width:2px;
+    classDef validation fill:#9f9,stroke:#333,stroke-width:2px;
 
-  Converge --> Batt
-  Converge --> Score
-
-  %% ===== THEORETICAL GROUNDING =====
-  subgraph TG[THEORETICAL GROUNDING]
-    Enact[Enactivism]
-    Second["Second-Order Cybernetics"]
-    Luhmann["Luhmann's Social Systems"]
-    Fourth["Fourth-Order Cybernetics"]
-    Enact <--> Second
-    Luhmann <--> Fourth
-  end
-
-  TG -.-> EC
-  TG -.-> QSEBLOCK
-  TG -.-> SOCIAL
-  TG -.-> VAL
-
+    class TG theory;
+    class QSE engine;
+    class EC core;
+    class SL social;
+    class VAL validation;
 
 ---
 
