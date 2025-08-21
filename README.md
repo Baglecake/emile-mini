@@ -5,7 +5,7 @@
 [![University of Toronto](https://img.shields.io/badge/University%20of-Toronto-003F7F.svg)](https://www.utoronto.ca/)
 [![Research](https://img.shields.io/badge/Type-Research-brightgreen.svg)](https://github.com)
 
-A lightweight instantiation of **enactive cognition** through computational autopoiesis. Moving beyond popular frameworks of *Artificial Intelligence* (AI) and *Machine Learning (ML)*, this project implements bidirectional *quantum-symbolic coupling* between agent and environment to demonstrate how intelligent behavior emerges through contextual enaction. Drawing on theories of *autopoietic enactivism*, a novel articulation of *quantum semiotics*, and the *orders of cybernetics*, émile-Mini presents a metaphysics of cognition beyond anthropomorphism that engages a *sociology of being-itself* to demonstrate the co-constitution of *life* and *mind*.  
+A lightweight model of ***enactive cognition*** and ***computational autopoiesis***. émile-Mini embodies first-principle intelligent systems design, implementing bidirectional *quantum-symbolic coupling* between agent and environment to motivate cognition through contextual enactivism. Formally articulated as ***"Enactive-Machine Interactive-Learner"*** the émile-series of cognitive models presents a novel approach to artificial intelligence, synthesizing frameworks of ***autopoietic enactivism***, ***existential phenomenology***, ***quantum semiotics***, and ***cybernetic theory*** as a tangible metaphysics of cognition. Distinct from data-driven contemporary AI and a neutral party to anthropomorphism, émile-Mini engages a ***sociology of being-itself*** to demonstrate the co-constitution of ***life*** and ***mind*** as a meaningful and viable condition for emergent cognition. Where contemporary AI and ML organize around ***extrinsic*** ethics of optimization and external goals, émile-Mini is powered by an ***"ontology of intrinsic teleology"***, distinct in two significant ways: ***phenomenologically*** in the persistent, coherent autopoietic tonic that is the condition of viability, and, ***empirically*** in the ***quantum metaphysics*** driving bidirectional coupling of agent and context. émile-Mini marks a milestone in the émile-series as the first production-ready cognitive design tested against modern and traditional reinforcement learning benchmarks, revealing intelligent behaviour and a striking zero-shot aptitude. Presenting émile-Mini as a statement of both theory and praxis, this project proposes a new paradigm in ***Human-Computer Interaction*** (HCI) that seeks to unify ***higher-order cybernetics*** and ***artificial intelligence*** under an ***enactivist*** ethic of computational cognition.
 
 ## v0.3.0 — (S.E.E.) Social, Embodied, Enactive  
 **TL;DR**: Demonstrable bidirectionality ↔ cognition + embodied navigation.
@@ -466,9 +466,9 @@ This repository provides émile-mini v0.3.0, a computational-autopoietic archite
 
 ### Fourth-Order Cybernetics
 
-The social cognition components implement networks of observers, moving beyond individual autopoiesis toward collective refleivity and meaning-making. This is demonstrated through:
+The social cognition components implement networks of observers, moving beyond individual autopoiesis toward collective reflexivity and meaning-making. This is demonstrated through:
   
-**Social Teaching/Learning**: Knowledge transfer preserving agent autonomy while enabling convergence, encouraged by the user through architectural design that is itself informed through the system as an autopoitetic epistemology of observers observing each other towards the recursive emergence of meaning through enactive contexts.
+**Social Teaching/Learning**: Knowledge transfer preserving agent autonomy while enabling convergence, encouraged by the user through architectural design that is itself informed through the system as an autopoietic epistemology of observers observing each other towards the recursive emergence of meaning through enactive contexts.
 
 **Trust Dynamics**: Agents evaluate knowledge sources based on past reliability and novelty, adapting dynamics to new  social and architectural environments.
 
