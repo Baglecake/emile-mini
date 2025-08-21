@@ -8,7 +8,7 @@
 A lightweight model of ***enactive cognition*** and ***computational autopoiesis***
 ---  
 
-## v0.3.0 — (S.E.E.) Social, Embodied, Enactive   
+## v0.3.0 — Social, Embodied, Enactive, Agentic  
 **TL;DR**: Demonstrable bidirectionality ↔ cognition + embodied navigation.
 - 7/7 autopoiesis gates ✅ (score ≈ 0.9998)
 - Regime switching +~24% when coupled (≈23.29% → ≈28.84%)
