@@ -89,7 +89,6 @@ where agent and context co-constitute conditions of viability in ***sympoiesis**
    S ↔ σ ↔ ψ ↔ context ↔ action ↔ environment ↔ S
 ```
 ### Four Orders of Autonomous Persistence
-émile-Mini engages four distinct components of autonomous persistence:
   
    **1) Phenomenological Coherence** - QSE dynamics generate intrinsic temporality through emergent time modulation, creating subjective experience of cognitive flow  
    
