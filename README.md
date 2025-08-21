@@ -35,10 +35,11 @@ pip install -U "git+https://github.com/Baglecake/emile-mini.git#egg=emile-mini"
 
 > *"A prerequisite for mind is life, just like life, mind can only emerge out of certain organisational structures, therefore life and mind are conceived as continuous... Minds have to be studied in the broader context of living systems and not merely as dead abstract computational processes"* (De Jesus, 2015)
 
-**Strong Life-Mind Continuity Thesis (SLMCT+)**: 
+**Strong Life-Mind Continuity Thesis (SLMCT+)**:   
 The SLMCT underpins this work as an *ethic* of cognition itself, where "the self-organizing features of mind are an enriched version of the self-organizing features of life.” (Thompson, 2007). Embracing the bidirectionality of this ethic, the émile project extends the SLMCT toward an understanding of living systems as constitutive conditions for cognition, with the cognitive a necessary and reciprocal quality for the emergence and persistance of life. Insofar as a _being-in-itself_ is a _being-in-the-world_, "the difference between mind and life is essentially one of degree and not in kind.” (De Jesus, 2015). Such is an **intrinsic teleology**, an existential dialogue through which emerges a _sociology of being-itself_ where _being_ is enacted through the context of its emergence, and context, in turn, is qualified in the distinction of its _being_.
 
-## Enactive Systems Design: An Architectural Methodology   
+## Enactive Systems Design: An Architectural Methodology 
+  
 émile-Mini embodies *first-principles* intelligent systems design, emphasizing contextual autopoietic enactivism as the necessary precondition for both agent and environment. Formally articulated as ***"Enactive-Machine Interactive-Learner"*** the émile-series of cognitive models presents a novel synthetic extension of ***autopoietic enactivism***, ***existential phenomenology***, ***quantum semiotics***, and ***cybernetic theory*** as a viable metaphysics of ***sympoietic cognition***. Distinct from data-driven contemporary AI and a neutral party to anthropomorphism, émile-Mini engages a ***sociology of being-itself*** to demonstrate the co-constitution of ***life*** and ***mind*** as an existential quality of emergent cognition. This synthesis is operationalized through Python based simulation as an empirical condition of viability, currently formalized as **Quantum Surplus Emergence (QSE)** and embodied in four cognitive sympoietic components - **Agentic***, **Embodied**, **Social (Multi-Agent)**, and **Temporal**.
 
 ### Quantum-Semiotic Coupling: The Dynamics of Sympoietic Cognition
