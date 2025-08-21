@@ -33,7 +33,7 @@ pip install -U "git+https://github.com/Baglecake/emile-mini.git#egg=emile-mini"
 > *"A prerequisite for mind is life, just like life mind can only emerge out of certain organisational structures, therefore life and mind are conceived as continuous... Minds have to be studied in the broader context of living systems and not merely as dead abstract computational processes"* (De Jesus, 2015)
   
 ### Beyond Abstraction -> Tangible Meaning-Making
-> Moving past assumptions of computational stasis into enactive cognition
+> Moving past assumptions of "static computation" to embrace *enactive cognition*
 
 **From abstract to tangible** - émile-Mini *embodies* how **meaning-making emerges through autopoietic dynamics**:
 
