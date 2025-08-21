@@ -6,12 +6,7 @@
 [![Research](https://img.shields.io/badge/Type-Research-brightgreen.svg)](https://github.com)
 
 A lightweight model of ***enactive cognition*** and ***computational autopoiesis***
----
-  
-## 🧪 Research Framework
-```
-This repository presents émile-mini v0.3.0, a computational-autopoietic architecture that couples a quantum surplus emergence (QSE) field to symbolic decision dynamics and embodied navigation. A three-stage validator—QSE core → agent coupling (cognitive + embodied) → pattern analysis—quantifies emergence and bidirectional influence. Measurements indicate: 7/7 autopoiesis gates pass with an overall score ≈ 0.9998; coupling a cognitive agent to the QSE core increases regime transitions by ~24% (≈23.29% → ≈28.84%); and bidirectional coupling is detectable in correlations such as QSE-influence ↔ goal changes (r≈0.87) and phasic rupture ↔ learning updates (r≈0.44). A memory-cued navigation agent demonstrates robust embodied behavior under the same framework. These results support an enactive, fourth-order cybernetics interpretation in which cognition arises from recursive regulation and context-sensitive interaction rather than static representation.
-```
+---  
 
 ## v0.3.0 — (S.E.E.) Social, Embodied, Enactive   
 **TL;DR**: Demonstrable bidirectionality ↔ cognition + embodied navigation.
@@ -29,6 +24,9 @@ pip install -U "git+https://github.com/Baglecake/emile-mini.git#egg=emile-mini"
 * **Import path:** `emile_mini`
 * **CLI command:** `emile-mini`
 * **New in v0.3.0:** Real QSE validation with bidirectional coupling analysis
+
+## Repository Abstract  
+This repository presents émile-mini v0.3.0, a computational-autopoietic architecture that couples a quantum surplus emergence (QSE) field to symbolic decision dynamics and embodied navigation. A three-stage validator—QSE core → agent coupling (cognitive + embodied) → pattern analysis—quantifies emergence and bidirectional influence. Measurements indicate: 7/7 autopoiesis gates pass with an overall score ≈ 0.9998; coupling a cognitive agent to the QSE core increases regime transitions by ~24% (≈23.29% → ≈28.84%); and bidirectional coupling is detectable in correlations such as QSE-influence ↔ goal changes (r≈0.87) and phasic rupture ↔ learning updates (r≈0.44). A memory-cued navigation agent demonstrates robust embodied behavior under the same framework. These results support an enactive, fourth-order cybernetics interpretation in which cognition arises from recursive regulation and context-sensitive interaction rather than static representation.
 
 ---
 
