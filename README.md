@@ -85,7 +85,7 @@ In **émile-Mini** this manifests as:
           |                    |                    |
           v                    v                    v
 +------------------+   +------------------+   +------------------+
-|   ⚙️ QSE ENGINE    |   |   🏃 ENACTIVE CORE |   |   🤝 SOCIAL LAYER  |
+|   ⚙️ QSE ENGINE  |   | 🏃 ENACTIVE CORE |    |  🤝 SOCIAL LAYER |
 |------------------|   |------------------|   |------------------|
 | - Surplus (S)    |   | - Agent          |   | - Teaching       |
 | - Curvature (σ)  |   | - Environment    |   | - Learning       |
