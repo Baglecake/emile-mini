@@ -465,13 +465,15 @@ This repository provides émile-mini v0.3.0, a computational-autopoietic archite
 
 ### Fourth-Order Cybernetics
 
-The social cognition components implement networks of observers co-constructing meaning, moving beyond individual autopoiesis toward collective sense-making through:
+The social cognition components implement networks of observers, moving beyond individual autopoiesis toward collective refleivity and meaning-making. This is demonstrated through:
+  
+**Social Teaching/Learning**: Knowledge transfer preserving agent autonomy while enabling convergence, encouraged by the user through architectural design that is itself informed through the system as an autopoitetic epistemology of observers observing each other towards the recursive emergence of meaning through enactive contexts.
 
-**Social Teaching/Learning**: Knowledge transfer preserving agent autonomy while enabling convergence
+**Trust Dynamics**: Agents evaluate knowledge sources based on past reliability and novelty, adapting dynamics to new  social and architectural environments.
 
-**Trust Dynamics**: Agents evaluate knowledge sources based on past reliability and novelty
+**Emergent Communication**: Shared understanding develops through the interactivity of the social teaching/learning feedback loop.
 
-**Emergent Communication**: Shared understanding develops through interaction, not pre-given symbols
+In such a way does émile-Mini embody an ethic of fourth order cybernetics in relation to Human-Computer Interaction (HCI), where systems regulate each other as a network of networks in a field of observation and reflexive enaction.
 
 ---
 
