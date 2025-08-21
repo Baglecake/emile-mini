@@ -83,7 +83,7 @@ This autopoietic loop manifests across four phenomenological domains:
 The QSE enables enactive autonomy as a ***phenomenologically coherent intrinsic teleology*** within bounds of autopoietic homeostasis (tonic). Where contemporary AI and ML organize around ***extrinsic*** ethics of optimization and externally oriented goals, émile-Mini is motivated by an ***"ontology of intrinsic teleology"*** necessitating ***mutually assured distinction*** between agent and environment as a ***bidirectional condition of viability*** for being-itself.
   
 ---
-## **Bidirectionality of 4th-Order Cybernetics***   
+## **Bidirectionality of 4th-Order Cybernetics**   
 where agent and context co-constitute conditions of viability in ***sympoiesis***.  
 ```
    S ↔ σ ↔ ψ ↔ context ↔ action ↔ environment ↔ S
