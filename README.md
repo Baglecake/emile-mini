@@ -29,7 +29,7 @@ pip install -U "git+https://github.com/Baglecake/emile-mini.git#egg=emile-mini"
 
 ## 🧬 Theoretical Foundation
 
-> *"A prerequisite for mind is life, just like life mind can only emerge out of certain organisational structures, therefore life and mind are conceived as continuous... Minds have to be studied in the broader context of living systems and not merely as dead abstract computational processes"* (De Jesus, 2015)
+> *"A prerequisite for mind is life, just like life, mind can only emerge out of certain organisational structures, therefore life and mind are conceived as continuous... Minds have to be studied in the broader context of living systems and not merely as dead abstract computational processes"* (De Jesus, 2015)
 
 **Strong Life-Mind Continuity Thesis (SLMCT+)**: The SLMCT underpins this work as an *ethic* of cognition itself, where "the self-organizing features of mind are an enriched version of the self-organizing features of life.” (Thompson, 2007). Embracing the bidirectionality of this ethic, the émile project extends the SLMCT toward an understanding of living systems as constitutive conditions for cognition, with the cognitive a necessary and reciprocal quality for the emergence and persistance of life. Insofar as a _being-in-itself_ is a _being-in-the-world_, "the difference between mind and life is essentially one of degree and not in kind.” (De Jesus, 2015). Such is the *intrinsic teleology*, an existential dialogue through which emerges a _sociology of being-itself_ where _being_ is enacted through the context of its emergence, and context, in turn, is qualified in the distinction of its _being_.
 
