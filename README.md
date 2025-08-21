@@ -415,33 +415,33 @@ This repository provides émile-mini v0.3.0, a computational-autopoietic archite
 ```
 ### Theoretical Contributions
 
-**Strong Life-Mind Continuity**: Computational validation that the same autopoietic principles generating biological viability also produce cognitive emergence.
+-> **Strong Life-Mind Continuity**: Computational validation that the same autopoietic principles generating biological viability also produce cognitive emergence.
 
-**Bidirectional Causation**: First implementation of quantum-symbolic coupling where dynamics shape reasoning and reasoning modulates dynamics.
+-> **Bidirectional Causation**: First implementation of quantum-symbolic coupling where dynamics shape reasoning and reasoning modulates dynamics.
 
-**Phenomenological Continuity**: Context switching based on lived experience rather than external programming.
+-> **Phenomenological Continuity**: Context switching based on lived experience rather than external programming.
 
-**Empirical Semiotics**: Meaning emerges from autopoietic processes, not symbolic manipulation.
+-> **Empirical Semiotics**: Meaning emerges from autopoietic processes, not symbolic manipulation.
 
 ### Architectural Innovations
 
-**Endogenous Context Switching**: Autonomous reframing based on symbolic curvature thresholds with hysteresis.
+-> **Endogenous Context Switching**: Autonomous reframing based on symbolic curvature thresholds with hysteresis.
 
-**QSE Engine**: Quantum surplus emergence with tonic/phasic rupture dynamics and autopoiesis gates.
+-> **QSE Engine**: Quantum surplus emergence with tonic/phasic rupture dynamics and autopoiesis gates.
 
-**Embodied Integration**: Physical state directly influences cognitive processes through energy dynamics.
+-> **Embodied Integration**: Physical state directly influences cognitive processes through energy dynamics.
 
-**Social Autopoiesis**: Knowledge transfer through trust and novelty mechanisms preserving agent autonomy.
+-> **Social Autopoiesis**: Knowledge transfer through trust and novelty mechanisms preserving agent autonomy.
 
 ### Validation Protocols
 
-**QSE Core Analysis**: Autopoiesis validation with 7 gates measuring boundary integrity, viability maintenance, productive instability.
+-> **QSE Core Analysis**: Autopoiesis validation with 7 gates measuring boundary integrity, viability maintenance, productive instability.
 
-**Bidirectional Coupling**: Analysis of QSE ↔ Agent correlations with regime transition tracking.
+-> **Bidirectional Coupling**: Analysis of QSE ↔ Agent correlations with regime transition tracking.
 
-**Emergent Dynamics**: Comparison of isolated vs coupled systems demonstrating 24% increase in regime complexity.
+-> **Emergent Dynamics**: Comparison of isolated vs coupled systems demonstrating 24% increase in regime complexity.
 
-**Statistical Validation**: 400+ episodes per condition with confidence intervals and effect size analysis.
+-> **Statistical Validation**: 400+ episodes per condition with confidence intervals and effect size analysis.
 
 ---
 
