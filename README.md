@@ -101,7 +101,7 @@ where agent and context co-constitute conditions of viability in ***sympoiesis**
 
 This 4th-order cybernetic architecture transcends subject/object dualism by implementing mutual specification of agent and environment through the quantum dynamics themselves. The system autonomously persists not through external reward optimization, but through the intrinsic teleology of maintaining quantum-symbolic coherence while navigating environmental complexity.
   
-émile-Mini marks a milestone in the émile-series as the first production-ready cognitive design tested against modern and traditional reinforcement learning benchmarks, revealing intelligent behaviour and striking zero-shot aptitude. Presenting émile-Mini as a statement of both theory and praxis, this project proposes a new paradigm in ***Human-Computer Interaction*** (HCI) that seeks to unify ***higher-order cybernetics*** and ***artificial intelligence*** under an ***enactivist*** ethic of ***computational cognition**.
+émile-Mini marks a milestone in the émile-series as the first production-ready cognitive design tested against modern and traditional reinforcement learning benchmarks, revealing intelligent behaviour and striking zero-shot aptitude. Presenting émile-Mini as a statement of both theory and praxis, this project proposes a new paradigm in ***Human-Computer Interaction*** (HCI) that seeks to unify ***higher-order cybernetics*** and ***artificial intelligence*** under an ***enactivist*** ethic of ***computational cognition***.
 
 ---
 
