@@ -30,6 +30,20 @@ pip install -U "git+https://github.com/Baglecake/emile-mini.git#egg=emile-mini"
    > This repository presents émile-mini v0.3.0, a computational-autopoietic architecture that couples a quantum surplus emergence (QSE) field to symbolic decision dynamics and embodied navigation. A three-stage validator—QSE core → agent coupling (cognitive + embodied) → pattern analysis—quantifies emergence and bidirectional influence. Measurements indicate: 7/7 autopoiesis gates pass with an overall score ≈ 0.9998; coupling a cognitive agent to the QSE core increases regime transitions by ~24% (≈23.29% → ≈28.84%); and bidirectional coupling is detectable in correlations such as QSE-influence ↔ goal changes (r≈0.87) and phasic rupture ↔ learning updates (r≈0.44). A memory-cued navigation agent demonstrates robust embodied behavior under the same framework. These results support an enactive, fourth-order cybernetics interpretation in which cognition arises from recursive regulation and context-sensitive interaction rather than static representation.
 
 ---
+## 🗺️ Table of Contents
+- [Theoretical Foundation](#-theoretical-foundation)
+- [What is enactive cognition?](#-what-is-enactive-cognition)
+- [Architecture Overview](#architecture-overview)
+- [Key Features (v0.3.0)](#-key-features-v030)
+- [Research Results Summary](#-research-results-summary)
+- [Research Insights](#-research-insights)
+- [Benchmark Results](#-benchmark-results)
+- [Installation](#-installation)
+- [Quick Start](#-quick-start)
+- [Reproduction & Research](#-reproduction--research)
+- [Project Structure](#-project-structure)
+- [Citation](#-citation)
+---
 
 ## 🧬 Theoretical Foundation
 
@@ -531,7 +545,7 @@ For research citing the theoretical contributions:
 ```bibtex
 @unpublished{coburn2025qse,
   author  = {Coburn, Del},
-  title   = {{Fourth-Order Cybernetics}: Enacting Bidirectional {Quantum}--{Symbolic} Coupling through {Computational Autopoiesis}},
+  title   = {{Fourth-Order Cybernetics}: Enactive Bidirectional {Quantum}--{Symbolic} Coupling Through {Computational Autopoiesis}},
   year    = {2025},
   note    = {Unpublished manuscript},
   url     = {https://github.com/Baglecake/emile-mini},
