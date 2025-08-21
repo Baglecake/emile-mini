@@ -7,6 +7,10 @@
 
 A lightweight model of ***enactive cognition*** and ***computational autopoiesis***
 ---
+## 🧪 Research Framework
+```
+This repository presents émile-mini v0.3.0, a computational-autopoietic architecture that couples a quantum surplus emergence (QSE) field to symbolic decision dynamics and embodied navigation. A three-stage validator—QSE core → agent coupling (cognitive + embodied) → pattern analysis—quantifies emergence and bidirectional influence. Measurements indicate: 7/7 autopoiesis gates pass with an overall score ≈ 0.9998; coupling a cognitive agent to the QSE core increases regime transitions by ~24% (≈23.29% → ≈28.84%); and bidirectional coupling is detectable in correlations such as QSE-influence ↔ goal changes (r≈0.87) and phasic rupture ↔ learning updates (r≈0.44). A memory-cued navigation agent demonstrates robust embodied behavior under the same framework. These results support an enactive, fourth-order cybernetics interpretation in which cognition arises from recursive regulation and context-sensitive interaction rather than static representation.
+```
 
 ## v0.3.0 — (S.E.E.) Social, Embodied, Enactive   
 **TL;DR**: Demonstrable bidirectionality ↔ cognition + embodied navigation.
@@ -31,19 +35,8 @@ pip install -U "git+https://github.com/Baglecake/emile-mini.git#egg=emile-mini"
 
 > *"A prerequisite for mind is life, just like life, mind can only emerge out of certain organisational structures, therefore life and mind are conceived as continuous... Minds have to be studied in the broader context of living systems and not merely as dead abstract computational processes"* (De Jesus, 2015)
 
-**Strong Life-Mind Continuity Thesis (SLMCT+)**: The SLMCT underpins this work as an *ethic* of cognition itself, where "the self-organizing features of mind are an enriched version of the self-organizing features of life.” (Thompson, 2007). Embracing the bidirectionality of this ethic, the émile project extends the SLMCT toward an understanding of living systems as constitutive conditions for cognition, with the cognitive a necessary and reciprocal quality for the emergence and persistance of life. Insofar as a _being-in-itself_ is a _being-in-the-world_, "the difference between mind and life is essentially one of degree and not in kind.” (De Jesus, 2015). Such is the *intrinsic teleology*, an existential dialogue through which emerges a _sociology of being-itself_ where _being_ is enacted through the context of its emergence, and context, in turn, is qualified in the distinction of its _being_.
-
-### Beyond Abstraction -> Tangible Meaning-Making
-> Moving past assumptions of "static computation" to embrace *enactive cognition*
-
-**From abstract to tangible** - émile-Mini *embodies* how **meaning-making emerges through autopoietic dynamics**:
-
-- **QSE Engine**: Computational autopoiesis with boundary maintenance and productive instability
-- **Phenomenologically Informed**: Symbolic curvature triggers endogenous context switching based on lived experience  
-- **Intrinsic Teleology**: Goal formation emerges from surplus dynamics, not external programming
-- **Life-Mind Continuity**: Same autopoietic principles generate both biological viability and cognitive emergence
-  
----
+**Strong Life-Mind Continuity Thesis (SLMCT+)**: 
+The SLMCT underpins this work as an *ethic* of cognition itself, where "the self-organizing features of mind are an enriched version of the self-organizing features of life.” (Thompson, 2007). Embracing the bidirectionality of this ethic, the émile project extends the SLMCT toward an understanding of living systems as constitutive conditions for cognition, with the cognitive a necessary and reciprocal quality for the emergence and persistance of life. Insofar as a _being-in-itself_ is a _being-in-the-world_, "the difference between mind and life is essentially one of degree and not in kind.” (De Jesus, 2015). Such is an **intrinsic teleology**, an existential dialogue through which emerges a _sociology of being-itself_ where _being_ is enacted through the context of its emergence, and context, in turn, is qualified in the distinction of its _being_.
 
 ## Enactive Systems Design: An Architectural Methodology   
 émile-Mini embodies *first-principles* intelligent systems design, emphasizing contextual autopoietic enactivism as the necessary precondition for both agent and environment. Formally articulated as ***"Enactive-Machine Interactive-Learner"*** the émile-series of cognitive models presents a novel synthetic extension of ***autopoietic enactivism***, ***existential phenomenology***, ***quantum semiotics***, and ***cybernetic theory*** as a viable metaphysics of ***sympoietic cognition***. Distinct from data-driven contemporary AI and a neutral party to anthropomorphism, émile-Mini engages a ***sociology of being-itself*** to demonstrate the co-constitution of ***life*** and ***mind*** as an existential quality of emergent cognition. This synthesis is operationalized through Python based simulation as an empirical condition of viability, currently formalized as **Quantum Surplus Emergence (QSE)** and embodied in four cognitive sympoietic components - **Agentic***, **Embodied**, **Social (Multi-Agent)**, and **Temporal**.
@@ -119,10 +112,6 @@ In **émile-Mini** this manifests as:
 * **Endogenous context switching** (autonomous reframing of situations)
 * **Bidirectional causation** (QSE dynamics ↔ symbolic reasoning)
 
-## 🧪 Research Framework
-```
-This repository provides émile-mini v0.3.0, a computational-autopoietic architecture that couples a quantum surplus emergence (QSE) field to symbolic decision dynamics and embodied navigation. A three-stage validator—QSE core → agent coupling (cognitive + embodied) → pattern analysis—quantifies emergence and bidirectional influence. Measurements indicate: 7/7 autopoiesis gates pass with an overall score ≈ 0.9998; coupling a cognitive agent to the QSE core increases regime transitions by ~24% (≈23.29% → ≈28.84%); and bidirectional coupling is detectable in correlations such as QSE-influence ↔ goal changes (r≈0.87) and phasic rupture ↔ learning updates (r≈0.44). A memory-cued navigation agent demonstrates robust embodied behavior under the same framework. These results support an enactive, fourth-order cybernetics interpretation in which cognition arises from recursive regulation and context-sensitive interaction rather than static representation.
-```
 ---
 
 ### Architecture Overview
