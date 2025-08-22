@@ -6,11 +6,12 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![University of Toronto](https://img.shields.io/badge/University%20of-Toronto-003F7F.svg)](https://www.utoronto.ca/)
 [![Research](https://img.shields.io/badge/Type-Research-brightgreen.svg)](https://github.com)
-
-A lightweight model of ***enactive cognition*** and ***computational autopoiesis***
+```
+> A lightweight model of ***enactive cognition*** and ***computational autopoiesis***
+```
 ---  
 
-## v0.5.0 — Enhanced Navigation, Cognitive Battery, and Multimodal Integration  
+## v0.5.1 — Enhanced Navigation, Cognitive Battery, and Multimodal Integration  
 **TL;DR**: Demonstrable bidirectionality ↔ cognition + embodied navigation.
 - 7/7 autopoiesis gates ✅ (score ≈ 0.9998)
 - Regime switching +~24% when coupled (≈23.29% → ≈28.84%)
