@@ -21,11 +21,11 @@ A lightweight model of ***enactive cognition*** and ***computational autopoiesis
 ```bash
 pip install -U "git+https://github.com/Baglecake/emile-mini.git#egg=emile-mini"
 ```
-
+* **New in v0.5.0:** Enhanced navigation system, cognitive battery runner, and comprehensive multimodal support
 * **Package name:** `emile-mini`
 * **Import path:** `emile_mini`
 * **CLI command:** `emile-mini`
-* **New in v0.5.0:** Enhanced navigation system, cognitive battery runner, and comprehensive multimodal support
+* -> emile-mini - {social,maze,extinction,nav-demo,battery,nav-ppo-train,nav-compare,nav-report}
 
 ## Repository Abstract  
  
