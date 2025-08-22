@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Simple test script to verify CLI version output for v0.5.0 release.
+Simple test script to verify CLI version output for v0.5.1 release.
 """
 
 import subprocess
@@ -18,7 +18,7 @@ def test_cli_version():
             timeout=10
         )
         
-        expected = "emile-mini 0.5.0"
+        expected = "emile-mini 0.5.1"
         actual = (result.stdout + result.stderr).strip()
         
         if expected in actual and result.returncode == 0:
@@ -73,7 +73,7 @@ def test_cli_version():
             except SystemExit:
                 pass
 
-            expected = "emile-mini 0.5.0"
+            expected = "emile-mini 0.5.1"
             captured = stdout_capture.getvalue().strip()
             if expected in captured:
                 print(f"✅ CLI module test PASSED: '{captured}'")
@@ -98,7 +98,7 @@ def test_package_version():
     """Test that package __version__ is correct."""
     try:
         import emile_mini
-        expected = "0.5.0"
+        expected = "0.5.1"
         actual = emile_mini.__version__
         
         if actual == expected:
@@ -114,7 +114,7 @@ def test_package_version():
 
 
 if __name__ == "__main__":
-    print("Testing v0.5.0 release version consistency...")
+    print("Testing v0.5.1 release version consistency...")
     print("=" * 50)
     
     success = True
