@@ -561,11 +561,20 @@ class QSEAgentDynamicsRunner:
         if 'lagged' in self.correlation_matrices:
             for relationship, lagged_corrs in self.correlation_matrices['lagged'].items():
 
-                # Find peak correlation and its lag
-                max_corr_idx = np.nanargmax(np.abs(lagged_corrs))
+                # Check if we have any valid correlations
+                valid_corrs = [c for c in lagged_corrs if not np.isnan(c)]
+                if not valid_corrs:
+                    continue  # Skip if all correlations are NaN
+                
+                # Find peak correlation and its lag, handling NaN values
+                abs_corrs = np.abs(lagged_corrs)
+                if np.all(np.isnan(abs_corrs)):
+                    continue  # Skip if all are NaN
+                    
+                max_corr_idx = np.nanargmax(abs_corrs)
                 max_corr = lagged_corrs[max_corr_idx]
 
-                if abs(max_corr) > 0.2 and max_corr_idx > 0:  # Significant lagged correlation
+                if not np.isnan(max_corr) and abs(max_corr) > 0.2 and max_corr_idx > 0:  # Significant lagged correlation
                     qse_var, behavior_var = relationship.split('_leads_')
 
                     causal_relationships[relationship] = {
@@ -652,6 +661,14 @@ class QSEAgentDynamicsRunner:
                 'lag': strongest_causal[1]['optimal_lag'],
                 'interpretation': strongest_causal[1]['interpretation'],
                 'total_relationships': len(self.causal_relationships)
+            }
+        else:
+            findings['causal_insights'] = {
+                'strongest_relationship': None,
+                'strength': 0.0,
+                'lag': 0,
+                'interpretation': 'No significant causal relationships detected between QSE dynamics and agent behavior',
+                'total_relationships': 0
             }
 
         return findings
