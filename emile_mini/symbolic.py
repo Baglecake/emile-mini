@@ -4,14 +4,20 @@ SymbolicReasoner: the high‑level symbolic processor for the QSE–Émile agent
 Responsibilities:
   - Compute symbolic fields Ψ, Φ, and Σ from the surplus field S
   - Maintain a short history of Σ for monitoring
-  - Adapt its internal thresholds (θᵖˢⁱ, θᵖʰⁱ) based on QSE metrics
-  - Produce a "curvature" output for each cycle to feed back into QSE
-  - ENHANCED: EMA smoothing for stable context decisions
+  - Adapt its internal thresholds based on QSE metrics
+  - Produce curvature output each cycle to feed back into QSE
+  - ENHANCED: EMA smoothing for stable context decisions; optional multimodal modulation
 """
 
 import numpy as np
 from .config import CONFIG
 from .qse_core import calculate_symbolic_fields
+
+# Optional multimodal imports
+try:
+    from .multimodal import ModalityFusion
+except Exception:
+    ModalityFusion = None
 
 class SymbolicReasoner:
     def __init__(self, cfg=CONFIG):
@@ -24,6 +30,10 @@ class SymbolicReasoner:
         self.sigma_history = []
         # NEW: EMA smoothed sigma for stable context decisions
         self._sigma_ema = 0.0
+        self._fusion = None
+        if getattr(self.cfg, 'MULTIMODAL_ENABLED', False) and ModalityFusion is not None:
+            self._fusion = ModalityFusion(grid_size=int(self.cfg.GRID_SIZE),
+                                          influence_scale=float(getattr(self.cfg, 'MODALITY_INFLUENCE_SCALE', 0.25)))
 
     def adjust_parameters(self, qse_metrics: dict):
         """
@@ -50,7 +60,7 @@ class SymbolicReasoner:
         if regime == 'tension':
             self.cfg.THETA_PSI = max(0.1, self.cfg.THETA_PSI * 0.97)
 
-    def step(self, surplus_field: np.ndarray) -> np.ndarray:
+    def step(self, surplus_field: np.ndarray, modality_features=None) -> np.ndarray:
         """
         Given the current surplus field S, compute and return the symbolic curvature Σ.
         Also record its mean in history.
@@ -58,6 +68,23 @@ class SymbolicReasoner:
         """
         # Compute Ψ and Φ and get Σ = Ψ − Φ
         psi, phi, sigma = calculate_symbolic_fields(surplus_field, self.cfg)
+
+        # Optional multimodal modulation
+        if getattr(self.cfg, 'MULTIMODAL_ENABLED', False) and self._fusion is not None and modality_features is not None:
+            # Accept either a pre-fused np.ndarray or a list of ModalityFeature
+            if isinstance(modality_features, np.ndarray):
+                fused = modality_features
+            else:
+                fused = self._fusion.fuse(modality_features)
+            sigma_extra = self._fusion.to_sigma(fused)
+            if sigma_extra.shape != sigma.shape:
+                if sigma_extra.size > sigma.size:
+                    sigma_extra = sigma_extra[:sigma.size]
+                else:
+                    reps = int(np.ceil(sigma.size / max(1, sigma_extra.size)))
+                    sigma_extra = np.tile(sigma_extra, reps)[:sigma.size]
+            k = float(getattr(self.cfg, 'INPUT_COUPLING', 0.3))
+            sigma = sigma + k * sigma_extra
 
         # Record raw mean for diagnostics
         mean_sigma = float(np.mean(sigma))

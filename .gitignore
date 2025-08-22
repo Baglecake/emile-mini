@@ -12,3 +12,6 @@ real_qse_validation/
 *.jsonl
 *_episodes.csv
 *_summary.json
+
+# temp test files
+/tmp/

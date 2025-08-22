@@ -19,6 +19,13 @@ from .goal import GoalModule
 import numpy as np
 from collections import deque
 
+# Optional multimodal imports
+try:
+    from .multimodal import ModalityFeature, TextAdapter, ImageAdapter, AudioAdapter, ModalityAttentionPolicy
+except Exception:
+    ModalityFeature = None
+    TextAdapter = ImageAdapter = AudioAdapter = ModalityAttentionPolicy = None
+
 class _NullBody:
     def __init__(self, cfg):
         self.state = SimpleNamespace(energy=getattr(cfg, 'ENERGY_MIN_FLOOR', 0.05))
@@ -53,6 +60,56 @@ class EmileAgent:
         if not hasattr(self, 'body') or self.body is None:
             self.body = _NullBody(self.cfg)
 
+        # NEW: multimodal adapters and attention policy (no-op unless enabled)
+        self.mm_text = TextAdapter() if TextAdapter else None
+        self.mm_image = ImageAdapter() if ImageAdapter else None
+        self.mm_audio = AudioAdapter() if AudioAdapter else None
+        self._attention = ModalityAttentionPolicy() if ModalityAttentionPolicy else None
+        self.attention_mode = None
+        self._attention_steps_left = 0
+
+    # ---- Dynamic attention API ----
+    def set_attention_mode(self, mode: str = None, steps: int = 0):
+        """Temporarily bias modality weights, e.g., mode='listening' for N steps."""
+        self.attention_mode = mode
+        self._attention_steps_left = int(max(0, steps))
+
+    def _tick_attention(self):
+        if self._attention_steps_left > 0:
+            self._attention_steps_left -= 1
+            if self._attention_steps_left == 0:
+                self.attention_mode = None
+
+    def _dynamic_weights(self):
+        if self._attention is None:
+            return {}
+        try:
+            return self._attention.weights_for(self)
+        except Exception:
+            return {}
+
+    def _gather_modalities(self, external_input: dict = None):
+        """Collect optional modalities; apply dynamic weights based on internal state.
+        Returns list[ModalityFeature] or None. Only active if MULTIMODAL_ENABLED.
+        """
+        if not getattr(self.cfg, 'MULTIMODAL_ENABLED', False):
+            return None
+        if ModalityFeature is None:
+            return None
+        weights = self._dynamic_weights()
+        feats = []
+        if external_input:
+            if self.mm_text and external_input.get('text'):
+                feats.append(ModalityFeature('text', self.mm_text.encode(external_input['text']),
+                                             weights.get('text', 1.0)))
+            if self.mm_image and external_input.get('image') is not None:
+                feats.append(ModalityFeature('vision', self.mm_image.encode(external_input['image']),
+                                             weights.get('vision', 1.0)))
+            if self.mm_audio and external_input.get('audio') is not None:
+                feats.append(ModalityFeature('audio', self.mm_audio.encode(external_input['audio']),
+                                             weights.get('audio', 1.0)))
+        return feats or None
+
     def detect_repetition(self, window=None):
         """
         NEW: Detect if agent is stuck in repetitive loops
@@ -85,20 +142,19 @@ class EmileAgent:
     def step(self, dt: float = 0.01, external_input: dict = None) -> dict:
         """
         Perform one cognitive step:
-          - Compute Σ from surplus
+          - Compute Σ from surplus (optionally modulated by modalities)
           - Advance QSE engine
           - Update context
           - Select and evaluate goal
           - Store in memory
           - Log history
-        external_input may contain 'reward' or other signals.
-        Returns the QSE metrics dict.
-        ENHANCED: Uses EMA'd Σ, proper memory writes, existential pressure
         """
         self.step_counter += 1
+        self._tick_attention()
         
-        # 1) Symbolic: compute curvature Σ
-        sigma = self.symbolic.step(self.qse.S)
+        # 1) Symbolic: compute curvature Σ (optionally modality-aware)
+        mm = self._gather_modalities(external_input)
+        sigma = self.symbolic.step(self.qse.S, modality_features=mm)
 
         # 2) QSE update
         metrics = self.qse.step(sigma, dt)
