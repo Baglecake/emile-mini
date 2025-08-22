@@ -401,7 +401,7 @@ emile-mini nav-report --episodes 400 --quadrants NE,NW,SE,SW,C
 
 ### Programmatic Usage (Examples)
 
--> **Example 1** — Core QSE metrics only (standalone helper) Use this only if you need the raw autopoiesis metrics without the agent/behavior coupling.
+**Example 1** — Core QSE metrics only (standalone helper) Use this only if you need the raw autopoiesis metrics without the agent/behavior coupling.
 ```
 from emile_mini.qse_core_metric_runner_c import run_qse_metrics_collection
 
@@ -415,7 +415,7 @@ summary_path = run_qse_metrics_collection(
 print("Summary saved to:", summary_path)
 ```
 
--> **Example 2** — Coupling analysis via the runner (recommended)
+**Example 2** — Coupling analysis via the runner (recommended)
 ```python
 from emile_mini.qse_agent_dynamics_runner import QSEAgentDynamicsRunner
 
