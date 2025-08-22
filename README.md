@@ -23,7 +23,8 @@ A lightweight model of ***enactive cognition*** and ***computational autopoiesis
 ## Install
 ```bash
 pip install -U "git+https://github.com/Baglecake/emile-mini.git@v0.5.1#egg=emile-mini""  
-
+```
+```bash
 git clone https://github.com/Baglecake/emile-mini.git
 ```
 * **New in v0.5.1:** Enhanced navigation system, cognitive battery runner, and comprehensive multimodal support
