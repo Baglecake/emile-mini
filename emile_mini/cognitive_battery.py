@@ -202,12 +202,12 @@ def save_tables(prefix):
     print(f"\n💾 Saved:\n- {csv_path}\n- {json_path}")
 
 # ------------- Protocol A -------------
-def run_protocol_A(episodes, max_steps):
+def run_protocol_A(episodes, max_steps, config=None):
     print("🤖 Protocol A: Solo Embodied (Zero Training)")
     rewards=[]
     for ep in range(episodes):
         env = EmbodiedEnvironment()
-        agent = EmbodiedQSEAgent()
+        agent = EmbodiedQSEAgent(config=config) if config else EmbodiedQSEAgent()
         if hasattr(env, "add_agent"):
             env.add_agent(agent)
         elif hasattr(env, "agents") and isinstance(env.agents, dict):
@@ -264,13 +264,13 @@ def quadrant_targets(n):
         "C":  (mid, mid)
     }
 
-def run_protocol_C1(episodes, phases, steps_per_phase, max_steps):
+def run_protocol_C1(episodes, phases, steps_per_phase, max_steps, config=None):
     print("\n🧭 Protocol C1: Context-Switch Adaptation")
     phase_names = ["NE","SW","C","NW","SE"]
     results=[]
     for ep in range(episodes):
         env = EmbodiedEnvironment()
-        agent = EmbodiedQSEAgent()
+        agent = EmbodiedQSEAgent(config=config) if config else EmbodiedQSEAgent()
         if hasattr(env, "add_agent"):
             env.add_agent(agent)
         elif hasattr(env, "agents") and isinstance(env.agents, dict):
@@ -320,13 +320,13 @@ def run_protocol_C1(episodes, phases, steps_per_phase, max_steps):
     return mean, std
 
 # ------------- Protocol C2 (Memory-Cued Retrieval via nav agent) -------------
-def run_protocol_C2_nav(episodes, max_steps):
+def run_protocol_C2_nav(episodes, max_steps, config=None):
     print("\n🧠 Protocol C2: Memory-Cued Retrieval (Nav Agent)")
     results=[]
     quadrants = ["NE","NW","SE","SW","C"]
     for ep in range(episodes):
         env = ClearPathEnvironment(size=20)
-        agent = ProactiveEmbodiedQSEAgent()
+        agent = ProactiveEmbodiedQSEAgent(config=config) if config else ProactiveEmbodiedQSEAgent()
         # start at center, face east
         agent.body.state.position = (10, 10)
         agent.body.state.orientation = 0.0
@@ -392,6 +392,17 @@ def run_protocol_C2_nav(episodes, max_steps):
     print(f"✅ C2 (nav) total episode reward: {mean:.2f} ± {std:.2f}  (watch cue_follow_rate)")
     return mean, std
 
+# ------------- Helper to build QSEConfig from multimodal flags -------------
+def _build_multimodal_config(multimodal: bool = False, modality_scale: float = None):
+    """Helper to build QSEConfig with multimodal settings from CLI flags."""
+    from emile_mini.config import QSEConfig
+    cfg = QSEConfig()
+    if multimodal:
+        cfg.MULTIMODAL_ENABLED = True
+        if modality_scale is not None:
+            cfg.MODALITY_INFLUENCE_SCALE = modality_scale
+    return cfg
+
 # ------------- Main -------------
 def main(
     episodes_a: int,
@@ -409,12 +420,17 @@ def main(
     obstacles: float,
     start_mode: str,
     quadrant: str,
+    multimodal: bool = False,
+    modality_scale: float = None,
 ):
     np.random.seed(seed)
 
-    a_mean, a_std = run_protocol_A(episodes=episodes_a, max_steps=max_steps)
-    c1_mean, c1_std = run_protocol_C1(episodes=episodes_c1, phases=phases_c1, steps_per_phase=steps_per_phase, max_steps=max_steps)
-    c2_mean, c2_std = run_protocol_C2_nav(episodes=episodes_c2, max_steps=max_steps)
+    # Build multimodal config from flags
+    cfg = _build_multimodal_config(multimodal, modality_scale)
+
+    a_mean, a_std = run_protocol_A(episodes=episodes_a, max_steps=max_steps, config=cfg)
+    c1_mean, c1_std = run_protocol_C1(episodes=episodes_c1, phases=phases_c1, steps_per_phase=steps_per_phase, max_steps=max_steps, config=cfg)
+    c2_mean, c2_std = run_protocol_C2_nav(episodes=episodes_c2, max_steps=max_steps, config=cfg)
 
     # Optional PPO baseline & comparison on NavEnv
     compare_ppo_vs_handcrafted, make_env_kwargs, train_ppo = _try_import_sb3()

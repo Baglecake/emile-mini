@@ -44,6 +44,8 @@ def build_parser():
                      help="Target quadrant (default: NE)")
     nav.add_argument("--seed", type=int, default=42, help="RNG seed for deterministic runs")
     nav.add_argument("--verbose", action="store_true", help="Print per-step logs")
+    nav.add_argument("--multimodal", action="store_true", help="Enable multimodal pathway")
+    nav.add_argument("--modality-scale", type=float, help="Modality influence scale (default: 0.25)")
     nav.set_defaults(func=cmd_nav_demo)
 
     # battery
@@ -63,6 +65,8 @@ def build_parser():
     bat.add_argument("--obstacles", type=float, default=0.15)
     bat.add_argument("--start-mode", choices=["random","center"], default="random")
     bat.add_argument("--quadrant", choices=["NE","NW","SE","SW","C"], default="NE")
+    bat.add_argument("--multimodal", action="store_true", help="Enable multimodal pathway")
+    bat.add_argument("--modality-scale", type=float, help="Modality influence scale (default: 0.25)")
     bat.set_defaults(func=cmd_battery)
 
         # nav-ppo-train
@@ -239,7 +243,7 @@ def _import_nav_module():
     )
 
 
-def _run_nav_demo_inline(size=20, max_steps=50, quadrant="NE", seed=42, verbose=False):
+def _run_nav_demo_inline(size=20, max_steps=50, quadrant="NE", seed=42, verbose=False, multimodal=False, modality_scale=None):
     """
     Inline runner using the module classes so CLI options work.
     """
@@ -250,6 +254,12 @@ def _run_nav_demo_inline(size=20, max_steps=50, quadrant="NE", seed=42, verbose=
 
     from emile_mini.config import QSEConfig
     cfg = QSEConfig()
+    
+    # Configure multimodal settings if requested
+    if multimodal:
+        cfg.MULTIMODAL_ENABLED = True
+        if modality_scale is not None:
+            cfg.MODALITY_INFLUENCE_SCALE = modality_scale
 
     np.random.seed(seed)
     print("🧪 TESTING ENHANCED NAVIGATION SYSTEM")
@@ -362,6 +372,8 @@ def cmd_battery(args):
         obstacles=args.obstacles,
         start_mode=args.start_mode,
         quadrant=args.quadrant,
+        multimodal=args.multimodal,
+        modality_scale=getattr(args, 'modality_scale', None),
     )
 
 
@@ -379,7 +391,8 @@ def cmd_nav_demo(args):
     # If you want to see the parsed args, run with --verbose
     if args.verbose:
         print(f"[nav-demo] args -> size={args.size}, max_steps={args.max_steps}, "
-              f"quadrant={args.quadrant}, seed={args.seed}, verbose={args.verbose}")
+              f"quadrant={args.quadrant}, seed={args.seed}, verbose={args.verbose}, "
+              f"multimodal={args.multimodal}, modality_scale={getattr(args, 'modality_scale', None)}")
 
     try:
         return _run_nav_demo_inline(
@@ -387,7 +400,9 @@ def cmd_nav_demo(args):
             max_steps=args.max_steps,
             quadrant=args.quadrant,
             seed=args.seed,
-            verbose=args.verbose
+            verbose=args.verbose,
+            multimodal=args.multimodal,
+            modality_scale=getattr(args, 'modality_scale', None)
         )
     except Exception as e:
         print(f"[nav-demo] inline run failed: {e}", file=sys.stderr)
