@@ -399,24 +399,46 @@ emile-mini nav-compare --episodes 400 --obstacles 0.20
 emile-mini nav-report --episodes 400 --quadrants NE,NW,SE,SW,C
 ```
 
-### Programmatic Usage
+### Programmatic Usage (Examples)
 
+-> **Example 1** — Core QSE metrics only (standalone helper) Use this only if you need the raw autopoiesis metrics without the agent/behavior coupling.
+```
+from emile_mini.qse_core_metric_runner_c import run_qse_metrics_collection
+
+# Runs core QSE metrics collection and writes JSONL + a summary JSON
+summary_path = run_qse_metrics_collection(
+    steps=2000,
+    output_file="qse_core_metrics.jsonl",
+    seed=42,
+    verbose=False,
+)
+print("Summary saved to:", summary_path)
+```
+
+-> **Example 2** — Coupling analysis via the runner (recommended)
 ```python
-from emile_mini import QSEAgentDynamicsRunner, QSEMetricsCollector
+from emile_mini.qse_agent_dynamics_runner import QSEAgentDynamicsRunner
 
 # Analyze bidirectional QSE ↔ cognitive coupling
 runner = QSEAgentDynamicsRunner(agent_type="cognitive", environment_type="basic")
-results = runner.run_dynamics_analysis(steps=5000, output_file="coupling_analysis.jsonl")
+results = runner.run_dynamics_analysis(
+    steps=5000,
+    dt=0.01,
+    seed=42,
+    output_file="coupling_analysis.jsonl",  # JSONL stream of per-step data
+)
 
-# Examine bidirectional relationships
-correlations = results['correlation_matrices']['pearson']
+# Correlations (dict-of-dicts)
+correlations = results["correlation_matrices"]["pearson"]
 print(f"QSE → Goal Changes: {correlations['qse_influence_score']['goal_changed']:.3f}")
 print(f"Phasic Rupture → Learning: {correlations['phasic_rupture_active']['q_value_change']:.3f}")
 
-# QSE core analysis
-collector = QSEMetricsCollector()
-summary = collector.generate_summary_report()
+# Autopoiesis summary from the collector that actually ran
+summary = runner.qse_collector.generate_summary_report()
 print(f"Autopoiesis Score: {summary['autopoiesis_markers']['viability_maintenance_score']:.3f}")
+
+# Optional: inspect key findings
+print("Key findings:", results.get("key_findings", {}))
 ```
 
 ### Social Learning Example
