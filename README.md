@@ -7,7 +7,7 @@
 [![University of Toronto](https://img.shields.io/badge/University%20of-Toronto-003F7F.svg)](https://www.utoronto.ca/)
 [![Research](https://img.shields.io/badge/Type-Research-brightgreen.svg)](https://github.com)
 ```
-> A lightweight model of ***enactive cognition*** and ***computational autopoiesis***
+A lightweight model of ***enactive cognition*** and ***computational autopoiesis***
 ```
 ---  
 
