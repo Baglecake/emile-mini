@@ -22,6 +22,7 @@ emile_mini/goal.py
 emile_mini/maze_comparison.py
 emile_mini/maze_environment.py
 emile_mini/memory.py
+emile_mini/multimodal.py
 emile_mini/nav_env_gym.py
 emile_mini/nav_report.py
 emile_mini/ppo_nav_baseline.py
