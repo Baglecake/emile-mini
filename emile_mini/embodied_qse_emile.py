@@ -21,6 +21,12 @@ from pathlib import Path
 from emile_mini.agent import EmileAgent
 from emile_mini.config import QSEConfig
 
+# Optional multimodal import
+try:
+    from emile_mini.multimodal import ModalityFeature
+except Exception:
+    ModalityFeature = None
+
 @dataclass
 class BodyState:
     """Complete body state information"""
@@ -495,7 +501,19 @@ class EmbodiedQSEAgent(EmileAgent):
         visual_field = environment.get_visual_field(self.body, context_filter)
         
         # 2. Symbolic reasoning: Calculate sigma BEFORE calling QSE engine
-        sigma = self.symbolic.step(self.qse.S)
+        mm = None
+        if getattr(self.cfg, 'MULTIMODAL_ENABLED', False) and ModalityFeature is not None and getattr(self, 'mm_image', None) is not None:
+            w = self._dynamic_weights() if hasattr(self, '_dynamic_weights') else {}
+            # encode vision + minimal proprio
+            feats = [
+                ModalityFeature('vision', self.mm_image.encode(visual_field), w.get('vision', 1.0)),
+                ModalityFeature('proprio', np.array([
+                    self.body.state.position[0], self.body.state.position[1],
+                    self.body.state.orientation, self.body.state.energy
+                ], dtype=float), w.get('proprio', 1.0))
+            ]
+            mm = feats
+        sigma = self.symbolic.step(self.qse.S, modality_features=mm)
         
         # 3. QSE Processing: Pass sigma to the engine
         cognitive_metrics = self.qse.step(sigma, dt)

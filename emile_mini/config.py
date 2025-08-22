@@ -33,6 +33,10 @@ class QSEConfig:
     INPUT_COUPLING: float = 0.3  # Mixing ratio for external inputs
     GRID_SIZE: int = 64          # Spatial grid dimension
 
+    # NEW: Opt-in multimodal controls
+    MULTIMODAL_ENABLED: bool = False
+    MODALITY_INFLUENCE_SCALE: float = 0.25
+
     # Context & regime control
     CONTEXT_REFRACTORY_STEPS: int = 10       # Min steps between context shifts
     RECONTEXTUALIZATION_THRESHOLD: float = 0.20  # ΔS threshold for context shift
