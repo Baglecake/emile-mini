@@ -402,7 +402,7 @@ emile-mini nav-report --episodes 400 --quadrants NE,NW,SE,SW,C
 ### Programmatic Usage (Examples)
 
 **Example 1** — Core QSE metrics only (standalone helper) Use this only if you need the raw autopoiesis metrics without the agent/behavior coupling.
-```
+```python
 from emile_mini.qse_core_metric_runner_c import run_qse_metrics_collection
 
 # Runs core QSE metrics collection and writes JSONL + a summary JSON
@@ -441,7 +441,7 @@ print(f"Autopoiesis Score: {summary['autopoiesis_markers']['viability_maintenanc
 print("Key findings:", results.get("key_findings", {}))
 ```
 
-### Social Learning Example
+**Example 3** Social Learning
 
 ```python
 from emile_mini.social_qse_agent_v2 import run_social_experiment
