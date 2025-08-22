@@ -144,6 +144,32 @@ def build_parser():
 
     rep.set_defaults(func=cmd_nav_report)
 
+    # real-qse-validation
+    qse = sub.add_parser("real-qse-validation", help="Run QSE core metrics and QSE↔agent dynamics validations")
+    qse.add_argument("--comprehensive", action="store_true", help="Run both validations")
+    
+    # Core metrics options
+    qse.add_argument("--steps", type=int, default=1000, help="Number of steps for core metrics (default: 1000)")
+    qse.add_argument("--out", type=str, default="qse_core_metrics.jsonl", help="Output file for core metrics (default: qse_core_metrics.jsonl)")
+    
+    # Dynamics options
+    qse.add_argument("--steps-dyn", type=int, default=10000, help="Number of steps for dynamics analysis (default: 10000)")
+    qse.add_argument("--dt", type=float, default=0.01, help="Time step for dynamics analysis (default: 0.01)")
+    qse.add_argument("--agent", choices=["cognitive", "embodied"], default="cognitive", help="Agent type for dynamics (default: cognitive)")
+    qse.add_argument("--environment", choices=["basic", "embodied"], default="basic", help="Environment type for dynamics (default: basic)")
+    qse.add_argument("--out-dyn", type=str, default="qse_agent_dynamics.jsonl", help="Output file for dynamics analysis (default: qse_agent_dynamics.jsonl)")
+    qse.add_argument("--analysis", choices=["basic", "deep"], default="deep", help="Analysis depth for dynamics (default: deep)")
+    
+    # Shared options
+    qse.add_argument("--seed", type=int, default=42, help="Random seed (default: 42)")
+    qse.add_argument("--verbose", action="store_true", help="Verbose output")
+    
+    # Filters
+    qse.add_argument("--core-only", action="store_true", help="Run only core metrics collection")
+    qse.add_argument("--dynamics-only", action="store_true", help="Run only dynamics analysis")
+    
+    qse.set_defaults(func=cmd_real_qse_validation)
+
     return p
 
 
@@ -474,6 +500,86 @@ def cmd_nav_compare(args):
         print(f"[nav-compare] failed: {e}", file=sys.stderr)
         return 2
 
+
+def cmd_real_qse_validation(args):
+    """Handler for real-qse-validation subcommand"""
+    
+    # Validate argument combinations
+    if args.core_only and args.dynamics_only:
+        print("[real-qse-validation] Error: Cannot specify both --core-only and --dynamics-only", file=sys.stderr)
+        return 2
+    
+    # Determine what to run
+    run_core = not args.dynamics_only
+    run_dynamics = not args.core_only
+    
+    if args.comprehensive:
+        run_core = True
+        run_dynamics = True
+    
+    success_count = 0
+    
+    # Run core metrics if requested
+    if run_core:
+        print(f"🔬 Running QSE core metrics collection...")
+        try:
+            from .qse_core_metric_runner_c import run_qse_metrics_collection
+        except Exception as e:
+            print(f"[real-qse-validation] Core metrics import failed: {e}", file=sys.stderr)
+            run_core = False
+        
+        if run_core:
+            try:
+                summary_file = run_qse_metrics_collection(
+                    steps=args.steps,
+                    output_file=args.out,
+                    verbose=args.verbose,
+                    seed=args.seed
+                )
+                print(f"✅ Core metrics completed. Summary: {summary_file}")
+                success_count += 1
+            except Exception as e:
+                print(f"[real-qse-validation] Core metrics failed: {e}", file=sys.stderr)
+    
+    # Run dynamics analysis if requested
+    if run_dynamics:
+        print(f"🔬 Running QSE↔agent dynamics analysis...")
+        try:
+            from .qse_agent_dynamics_runner import QSEAgentDynamicsRunner
+        except Exception as e:
+            print(f"[real-qse-validation] Dynamics import failed: {e}", file=sys.stderr)
+            run_dynamics = False
+        
+        if run_dynamics:
+            try:
+                runner = QSEAgentDynamicsRunner(
+                    agent_type=args.agent,
+                    environment_type=args.environment
+                )
+                results = runner.run_dynamics_analysis(
+                    steps=args.steps_dyn,
+                    dt=args.dt,
+                    output_file=args.out_dyn,
+                    seed=args.seed
+                )
+                
+                # Print key findings as specified in requirements
+                key_findings = results.get('key_findings', {})
+                if key_findings:
+                    print(f"📊 Key findings:")
+                    for key, value in key_findings.items():
+                        print(f"  {key}: {value}")
+                
+                print(f"✅ Dynamics analysis completed. Output: {args.out_dyn}")
+                success_count += 1
+            except Exception as e:
+                print(f"[real-qse-validation] Dynamics analysis failed: {e}", file=sys.stderr)
+    
+    # Return appropriate exit code
+    if success_count == 0:
+        return 2  # Both halves failed
+    else:
+        return 0  # At least one half succeeded
 
 
 def main(argv=None):
