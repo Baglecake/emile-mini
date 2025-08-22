@@ -158,8 +158,8 @@ In **émile-Mini** this manifests as:
 | - Surplus (S)    |   | - Agent          |   | - Teaching       |
 | - Curvature (σ)  |   | - Environment    |   | - Learning       |
 | - Rupture Events |   | - Perception     |   | - Help-Seeking   |
-| - Autopoiesis    |   | - Action         |   | - Trust & Novelty|
-|   Gates          |   | - Embodied State |   | - Convergence    |
+| - Autopoiesis as |   | - Action         |   | - Trust & Novelty|
+| 3rd o.cybernetics|   | - Embodied State |   | - Convergence    |
 +------------------+   +------------------+   +------------------+
           |                    |                    |
           | powers             | generates data for |
