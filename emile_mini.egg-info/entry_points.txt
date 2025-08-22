@@ -1,4 +1,0 @@
-[console_scripts]
-emile-battery = emile_mini.cognitive_battery:main
-emile-mini = emile_mini.cli:main
-emile-validate = emile_mini.real_qse_validation_existing_tools:main

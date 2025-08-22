@@ -2,7 +2,11 @@
 from importlib.metadata import version as _pkg_version, PackageNotFoundError
 
 # Package version
-__version__ = "0.5.0"
+__version__ = "0.5.1"
+try:
+    __version__ = _pkg_version("emile-mini")
+except PackageNotFoundError:
+    pass
 
 # Always-present core pieces
 from .config import QSEConfig
