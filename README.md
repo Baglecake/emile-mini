@@ -17,8 +17,21 @@ A lightweight model of ***enactive cognition*** and ***computational autopoiesis
    - r≈0.87 (Quantum influence ↔ goal changes), r≈0.44 (phasic rupture ↔ learning)  
 ----
 ## Repository Abstract  
- 
-   > This repository presents émile-mini v0.5.0, a computational-autopoietic architecture that couples a quantum surplus emergence (QSE) field to symbolic decision dynamics and embodied navigation. This release introduces enhanced navigation systems with ProactiveEmbodiedQSEAgent, comprehensive cognitive battery protocols, and optional multimodal integration. The three-stage validator—QSE core → agent coupling (cognitive + embodied) → pattern analysis—continues to quantify emergence and bidirectional influence with improved robustness. New features include context hysteresis, memory module enhancements, and extensive CLI tooling for navigation reporting and PPO comparisons. These advances support sophisticated enactive learning scenarios while maintaining the core fourth-order cybernetics framework.
+
+### Empirical Semiotics in Action
+This repository presents émile-mini v0.5.1, an ***enactive-autopoietic*** computational architecture that couples ***quantum semiotics*** with attention and decision making. émile-Mini grounds meaning in four modalities of ***enactive cognition***: ***quantum*** (coherent autopoiesis), ***embodied*** (autonomous physicality), ***temporal*** (magnitudes of change), and ***social*** (observer affectation). These four modalities are bidirectionally coupled with context, bounding emergence within a feedback loop between agent and environment, and enacted through a recursive, fourth-order cybernetic pipeline:
+   
+   ```QSE core (autpoiesis gates) → agent coupling (enacted coherence) → pattern analysis (magnitudes of change) → existential pressure (observer enacted feedback) → recursion (↺)```
+
+Measurements indicate: 7/7 autopoiesis gates pass with an overall score ≈ 0.9998; coupling a cognitive agent to the QSE core increases regime transitions by ~24% (≈23.29% → ≈28.84%); and bidirectional coupling is detectable in correlations such as QSE-influence ↔ goal changes (r≈0.87) and phasic rupture ↔ learning updates (r≈0.44). A memory-cued navigation agent demonstrates robust embodied behavior under the same framework. These results support an enactive, fourth-order cybernetics interpretation in which cognition arises from recursive regulation and context-sensitive interaction rather than static representation.
+  
+**empirical semiotics**—studying how meaning emerges from living-like processes rather than symbolic manipulation. The system demonstrates:
+
+* **Phenomenological Continuity**: Beyond behaviorism, émile-Mini is a phenomenologically informed embodiment of cognition where "lived" experience gives it form.
+
+* **Intrinsic Teleology**: Purpose emerges from autopoietic organization rather than external goal specification, securing genuine cognition and sense-making as ontological components of internal coherence.
+
+   > This repository presents émile-mini v0.5.0, a computational-autopoietic architecture that couples a quantum surplus emergence (QSE) field to symbolic decision dynamics and embodied navigation. This release introduces enhanced navigation systems with a ***Proactive Embodied Agent***, comprehensive ***cognitive battery*** protocols, and optional ***multimodal integration***. The three-stage validator—QSE core → agent coupling (cognitive + embodied) → pattern analysis—continues to quantify emergence and bidirectional influence with improved robustness. New features include context hysteresis, memory module enhancements, and extensive CLI tooling for navigation reporting and PPO comparisons. These advances support sophisticated enactive learning scenarios while maintaining the core fourth-order cybernetics framework.
 
 ## Install
 ```bash
