@@ -1,43 +1,41 @@
 # émile-Mini: a lite enactive learner
- v0.5.0
+ v0.5.1
 
  [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/Baglecake/emile-mini/HEAD) 
 [![Python 3.8+](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![University of Toronto](https://img.shields.io/badge/University%20of-Toronto-003F7F.svg)](https://www.utoronto.ca/)
 [![Research](https://img.shields.io/badge/Type-Research-brightgreen.svg)](https://github.com)
-```
-A lightweight model of ***enactive cognition*** and ***computational autopoiesis***
-```
----  
 
+A lightweight model of ***enactive cognition*** and ***computational autopoiesis***  
+
+---
 ## v0.5.1 — Enhanced Navigation, Cognitive Battery, and Multimodal Integration  
-**TL;DR**: Demonstrable bidirectionality ↔ cognition + embodied navigation.
-- 7/7 autopoiesis gates ✅ (score ≈ 0.9998)
-- Regime switching +~24% when coupled (≈23.29% → ≈28.84%)
-- r≈0.87 (Quantum influence ↔ goal changes), r≈0.44 (phasic rupture ↔ learning)  
+   **TL;DR**: Demonstrable bidirectionality ↔ cognition + embodied navigation.
+   - 7/7 autopoiesis gates ✅ (score ≈ 0.9998)
+   - Regime switching +~24% when coupled (≈23.29% → ≈28.84%)
+   - r≈0.87 (Quantum influence ↔ goal changes), r≈0.44 (phasic rupture ↔ learning)  
 ----
+## Repository Abstract  
+ 
+   > This repository presents émile-mini v0.5.0, a computational-autopoietic architecture that couples a quantum surplus emergence (QSE) field to symbolic decision dynamics and embodied navigation. This release introduces enhanced navigation systems with ProactiveEmbodiedQSEAgent, comprehensive cognitive battery protocols, and optional multimodal integration. The three-stage validator—QSE core → agent coupling (cognitive + embodied) → pattern analysis—continues to quantify emergence and bidirectional influence with improved robustness. New features include context hysteresis, memory module enhancements, and extensive CLI tooling for navigation reporting and PPO comparisons. These advances support sophisticated enactive learning scenarios while maintaining the core fourth-order cybernetics framework.
 
 ## Install
 ```bash
 pip install -U "git+https://github.com/Baglecake/emile-mini.git#egg=emile-mini"
 ```
-* **New in v0.5.0:** Enhanced navigation system, cognitive battery runner, and comprehensive multimodal support
+* **New in v0.5.1:** Enhanced navigation system, cognitive battery runner, and comprehensive multimodal support
 * **Package name:** `emile-mini`
 * **Import path:** `emile_mini`
 * **CLI command:** `emile-mini`
-* -> emile-mini - {social,maze,extinction,nav-demo,battery,nav-ppo-train,nav-compare,nav-report}
-
-## Repository Abstract  
- 
-   > This repository presents émile-mini v0.5.0, a computational-autopoietic architecture that couples a quantum surplus emergence (QSE) field to symbolic decision dynamics and embodied navigation. This release introduces enhanced navigation systems with ProactiveEmbodiedQSEAgent, comprehensive cognitive battery protocols, and optional multimodal integration. The three-stage validator—QSE core → agent coupling (cognitive + embodied) → pattern analysis—continues to quantify emergence and bidirectional influence with improved robustness. New features include context hysteresis, memory module enhancements, and extensive CLI tooling for navigation reporting and PPO comparisons. These advances support sophisticated enactive learning scenarios while maintaining the core fourth-order cybernetics framework.
-
+  {--social,--maze,--extinction,--nav-demo,--battery,--nav-ppo-train,--nav-compare,--nav-report}
+   
 ---
 ## 🗺️ Table of Contents
 - [Theoretical Foundation](#-theoretical-foundation)
 - [What is enactive cognition?](#-what-is-enactive-cognition)
 - [Architecture Overview](#architecture-overview)
-- [Key Features (v0.5.0)](#-key-features-v050)
+- [Key Features (v0.5.1)](#-key-features-v050)
 - [Research Results Summary](#-research-results-summary)
 - [Research Insights](#-research-insights)
 - [Benchmark Results](#-benchmark-results)
@@ -180,7 +178,7 @@ In **émile-Mini** this manifests as:
     
 ---
 
-## ✨ Key Features (v0.5.0)
+## ✨ Key Features (v0.5.1)
 
 ### 🧬 Research Validation Framework
 * **Bidirectional QSE ↔ Cognitive Coupling**: First empirical validation of quantum surplus emergence driving cognitive behavior
@@ -321,7 +319,7 @@ cd emile-mini
 python -m pip install -e .
 
 # Exact version (this release)
-git clone --depth 1 --branch v0.5.0 https://github.com/Baglecake/emile-mini.git
+git clone --depth 1 --branch v0.5.1 https://github.com/Baglecake/emile-mini.git
 cd emile-mini
 python -m pip install -e .
 ```
@@ -530,9 +528,9 @@ emile_mini/
 
 ## 🗺️ Roadmap
 
-* ✅ **Enhanced Navigation System** (v0.5.0)
-* ✅ **Cognitive Battery Runner** (v0.5.0)  
-* ✅ **Multimodal Integration** (v0.5.0)
+* ✅ **Enhanced Navigation System** (v0.5.1)
+* ✅ **Cognitive Battery Runner** (v0.5.1)  
+* ✅ **Multimodal Integration** (v0.5.1)
 * ✅ **Bidirectional QSE validation** (v0.3.0)
 * ✅ **Autopoiesis measurement framework** (v0.3.0)  
 * ✅ **Comprehensive RL evaluation** (v0.2.0)
