@@ -1,7 +1,7 @@
 # émile-Mini: a lite enactive learner
  v0.5.1
 
- [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/Baglecake/emile-mini/HEAD) 
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/Baglecake/emile-mini/HEAD) 
 [![Python 3.8+](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![University of Toronto](https://img.shields.io/badge/University%20of-Toronto-003F7F.svg)](https://www.utoronto.ca/)
@@ -221,8 +221,6 @@ In **émile-Mini** this manifests as:
 
 ## 🧭 Decision Signature and Information Flow (v0.5.1)
 
-This release adds a complete, cross-run “decision signature” and information-flow validation that unifies hazard timing, pre-decision dynamics, and directed information measures.
-
 Key findings (10 runs; enriched mode, prewindow=15):
 - Refractory structure
   - First nonzero hazard at elapsed delay 14 steps; dominant spike at 14 with exact-count intervals and tight CIs.
@@ -236,23 +234,29 @@ Key findings (10 runs; enriched mode, prewindow=15):
   - Paired (surplus_mean − tau_prime): mean diff ≈ 0.00296 bits; 10/10 runs positive (two‑sided sign test p ≈ 0.00195).
   - Robustness: ordering surplus_mean > tau_prime holds across discretizations (quantile bins 4/6/8).
 
-Interpretation (measured):
+Interpretation:
 - Decisions unfold within a stable, emergent rhythm (first actionable moment at 14 steps since the last decision).
 - The pre-decision dynamics show small but consistent structure (surplus_mean dip-and-recovery; tau_prime steady decline), giving a visual decision signature.
-- Directed, predictive information from surplus_mean to decision events is consistently larger than from tau_prime across runs and discretizations, supporting a primary role for surplus_mean in precipitating decisions. We phrase this as directed information transfer consistent with causal influence under the usual TE assumptions (discretization, stationarity, order-1 history).
-
+- Directed, predictive information from surplus_mean to decision events is consistently larger than from tau_prime across runs and discretizations, supporting a primary role for surplus_mean in precipitating decisions – directed information transfer consistent with causal influence under the usual TE assumptions (discretization, stationarity, order-1 history).
+  
+---
 ###**Quick look**  
-- **Hazard Aggregate**  
+**Hazard Aggregate**  
 <img width="1050" height="600" alt="image" src="https://github.com/user-attachments/assets/5927fb6e-3531-4c97-99b5-fe18e301c7bd" />
 
-- **ETA Aggregate Surplus Mean**  
+---
+**ETA Aggregate Surplus Mean**  
 <img width="900" height="600" alt="image" src="https://github.com/user-attachments/assets/605fddc0-e44b-4187-83cf-288beba4d7cd" />
 
-- **ETA Aggregate Tau Prime**  
+---
+**ETA Aggregate Tau Prime**  
 <img width="900" height="600" alt="image" src="https://github.com/user-attachments/assets/9b932bca-e30f-401e-ba65-6a3f6003969b" />
 
-- **Transfer Entropy Aggregate**  
+---
+**Transfer Entropy Aggregate**  
  <img width="900" height="600" alt="image" src="https://github.com/user-attachments/assets/8300ccb8-bfd9-4991-adb0-6b66ea5ba13c" />
+
+---
 
 ### Reproduce the decision signature (end-to-end)
 
