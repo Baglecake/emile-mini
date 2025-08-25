@@ -54,7 +54,7 @@ git clone https://github.com/Baglecake/emile-mini.git
 - [Key Features (v0.5.1)](#-key-features-v050)
 - [Research Results Summary](#-research-results-summary)
 - [Research Insights](#-research-insights)
-- [Benchmark Results](#-benchmark-results)
+- [RL Benchmark Results](#-benchmark-results)
 - [Installation](#-installation)
 - [Quick Start](#-quick-start)
 - [Reproduction & Research](#-reproduction--research)
@@ -219,6 +219,82 @@ In **émile-Mini** this manifests as:
 
 ## 📊 Research Results Summary
 
+## 🧭 Decision Signature and Information Flow (v0.5.1)
+
+This release adds a complete, cross-run “decision signature” and information-flow validation that unifies hazard timing, pre-decision dynamics, and directed information measures.
+
+Key findings (10 runs; enriched mode, prewindow=15):
+- Refractory structure
+  - First nonzero hazard at elapsed delay 14 steps; dominant spike at 14 with exact-count intervals and tight CIs.
+- Event-Triggered Averages (standardized, baseline-relative with last K=7 excluded)
+  - surplus_mean: negative drift into a trough around ~−7, then recovery toward baseline by −1.
+  - tau_prime: steady negative drift into the event (≈ −0.01 by −1).
+  - Raw ETAs are flat as expected.
+- Directed information (Transfer Entropy, bits; 95% CIs across runs)
+  - surplus_mean: 0.004705 [0.003568, 0.005843]
+  - tau_prime:   0.001750 [0.001239, 0.002261]
+  - Paired (surplus_mean − tau_prime): mean diff ≈ 0.00296 bits; 10/10 runs positive (two‑sided sign test p ≈ 0.00195).
+  - Robustness: ordering surplus_mean > tau_prime holds across discretizations (quantile bins 4/6/8).
+
+Interpretation (measured):
+- Decisions unfold within a stable, emergent rhythm (first actionable moment at 14 steps since the last decision).
+- The pre-decision dynamics show small but consistent structure (surplus_mean dip-and-recovery; tau_prime steady decline), giving a visual decision signature.
+- Directed, predictive information from surplus_mean to decision events is consistently larger than from tau_prime across runs and discretizations, supporting a primary role for surplus_mean in precipitating decisions. We phrase this as directed information transfer consistent with causal influence under the usual TE assumptions (discretization, stationarity, order-1 history).
+
+###**Quick look**  
+- **Hazard Aggregate**  
+<img width="1050" height="600" alt="image" src="https://github.com/user-attachments/assets/5927fb6e-3531-4c97-99b5-fe18e301c7bd" />
+
+- **ETA Aggregate Surplus Mean**  
+<img width="900" height="600" alt="image" src="https://github.com/user-attachments/assets/605fddc0-e44b-4187-83cf-288beba4d7cd" />
+
+- **ETA Aggregate Tau Prime**  
+<img width="900" height="600" alt="image" src="https://github.com/user-attachments/assets/9b932bca-e30f-401e-ba65-6a3f6003969b" />
+
+- **Transfer Entropy Aggregate**  
+ <img width="900" height="600" alt="image" src="https://github.com/user-attachments/assets/8300ccb8-bfd9-4991-adb0-6b66ea5ba13c" />
+
+### Reproduce the decision signature (end-to-end)
+
+```bash
+# 1) Generate per-run artifacts (ETAs, hazard, clusters, TE)
+python scripts/decision_signature.py \
+  --runs-glob 'runs/embodied_orch_30k_s*' \
+  --features tau_prime surplus_mean \
+  --prewindow 15 \
+  --clusters 3 \
+  --te-bins 6 \
+  --outdir runs/analysis/decision_signature
+
+# 2) Aggregate from enriched files (raw + standardized/baseline-relative)
+python scripts/aggregate_decision_signature.py \
+  --runs-glob 'runs/embodied_orch_30k_s*' \
+  --sigdir runs/analysis/decision_signature \
+  --eta-mode enriched \
+  --enriched-file-name qse_agent_dynamics_embodied_emile.enriched.jsonl \
+  --features tau_prime surplus_mean \
+  --prewindow 15 \
+  --standardize-per-run \
+  --baseline-relative \
+  --baseline-last-k 7 \
+  --outdir runs/analysis/decision_signature/aggregate
+
+# 3) (Optional) Cluster-only aggregation (no enriched read)
+python scripts/aggregate_decision_signature.py \
+  --runs-glob 'runs/embodied_orch_30k_s*' \
+  --sigdir runs/analysis/decision_signature \
+  --eta-mode cluster \
+  --outdir runs/analysis/decision_signature/aggregate_cluster
+
+# 4) Auto-report (Markdown summary with embedded figures if present)
+python scripts/make_aggregate_report.py --outdir runs/analysis/decision_signature/aggregate
+```
+
+Notes and assumptions
+- Hazard is computed from exact at-risk/event counts (Wilson CIs).
+- TE is computed via discretized transfer entropy (order-1 history). Magnitudes are small (bits scale) but consistent; robustness checked across quantile bins (4/6/8). Interpret as directed predictive information flow; not a formal causal proof in the counterfactual sense.
+- Standardized, baseline-relative ETAs use per-run z-scoring and subtract the mean of steps [−pre, −(K+1)] with K=7 by default.
+
 ### Computational Autopoiesis Validation
 
 **QSE Core Metrics** (50,000 steps):
@@ -245,7 +321,7 @@ In **émile-Mini** this manifests as:
 - QSE-Cognitive (Coupled): **28.84%** phasic rupture events
 - **Emergence Factor**: +24% increase in regime complexity from bidirectional coupling
 
-The coupled system exhibits dynamics highly unlikely in any one component alone, strongly supporting computational approaches to modeling enactive cognition.
+The coupled system exhibits dynamics highly unlikely in any one component alone. Considered in totality, these findings offer compelling support for computational models of enactive cognition.
 
 ### 🛠️ CLI Tools & Validation
 ```bash
